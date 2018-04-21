@@ -105,8 +105,4 @@ private extension ARFloodViewController {
         configuration.planeDetection = [.horizontal, .vertical]
         arSession.run(configuration)
     }
-
-    func showCalculatorPanel() {
-
-    }
 }
