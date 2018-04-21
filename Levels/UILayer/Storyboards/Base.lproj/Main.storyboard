@@ -252,6 +252,9 @@
                                     <constraint firstAttribute="width" constant="40" id="zQq-vk-PjW"/>
                                 </constraints>
                                 <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="0iV-3t-ACy" eventType="touchUpInside" id="6co-iA-2j1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gce-Ku-Vx1">
                                 <rect key="frame" x="327" y="215" width="38" height="55"/>
@@ -362,6 +365,7 @@
                     </view>
                     <connections>
                         <outlet property="doorsSlider" destination="Yhm-nU-DMa" id="muz-NT-qdy"/>
+                        <outlet property="sandbagTotalLabel" destination="6gd-dR-NpW" id="KVf-FY-YAS"/>
                         <outlet property="slidingDoorsSlider" destination="RoX-Y6-JFe" id="kxh-i5-Xsd"/>
                         <outlet property="windowsSlider" destination="5KA-Ap-hi1" id="coi-lm-dXf"/>
                     </connections>

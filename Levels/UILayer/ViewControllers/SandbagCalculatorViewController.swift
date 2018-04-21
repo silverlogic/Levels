@@ -10,20 +10,18 @@ import UIKit
 import AlertTransition
 import VerticalSteppedSlider
 
-class SandbagCalculatorViewController: UIViewController, AlertFrameProtocol {
+final class SandbagCalculatorViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var doorsSlider: VSSlider!
     @IBOutlet private weak var windowsSlider: VSSlider!
     @IBOutlet private weak var slidingDoorsSlider: VSSlider!
+    @IBOutlet private weak var sandbagTotalLabel: UILabel!
+
+    // MARK: - Private Instance Attributes
 
 
-    var alertFrame: CGRect {
-        let height = UIScreen.main.bounds.width / 638 * 836
-        return CGRect(x: 0, y: UIScreen.main.bounds.height - height, width: UIScreen.main.bounds.width, height: height)
-    }
-
-
+    // MARK; - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -34,8 +32,22 @@ class SandbagCalculatorViewController: UIViewController, AlertFrameProtocol {
 extension SandbagCalculatorViewController {
     @IBAction func doorSlider(_ sender: VSSlider) {
     }
+
     @IBAction func windowSlider(_ sender: VSSlider) {
     }
+
     @IBAction func slidingDoorSlider(_ sender: VSSlider) {
+    }
+
+    @IBAction func shareButtonTapped(_ sender: UIButton) {
+    }
+}
+
+
+// MARK: - AlertFrameProtocol
+extension SandbagCalculatorViewController: AlertFrameProtocol {
+    var alertFrame: CGRect {
+        let height = UIScreen.main.bounds.width / 638 * 836
+        return CGRect(x: 0, y: UIScreen.main.bounds.height - height, width: UIScreen.main.bounds.width, height: height)
     }
 }
