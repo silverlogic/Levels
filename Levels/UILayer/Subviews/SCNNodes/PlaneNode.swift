@@ -6,6 +6,7 @@
 //  Copyright © 2018 The SilverLogic. All rights reserved.
 //
 
+import QuartzCore
 import Foundation
 import SceneKit
 import ARKit
@@ -44,11 +45,21 @@ extension PlaneNode {
 extension PlaneNode {
     private func setup(color: UIColor) {
         self.planeGeometry = SCNPlane(width: CGFloat(self.anchor.extent.x), height: CGFloat(self.anchor.extent.z))
+        var frames: [SKTexture] = []
+        for i in 0...9 {
+            frames.append(SKTexture(imageNamed: "frame_0\(i)_delay-0.1s"))
+        }
+        let waterSpriteNode = SKSpriteNode(texture: frames[0])
+        waterSpriteNode.position = CGPoint(x: waterSpriteNode.size.width / 2, y: waterSpriteNode.size.height / 2)
+        let runAction = SKAction.repeatForever(SKAction.animate(with: frames, timePerFrame: 0.1))
+        waterSpriteNode.run(runAction)
+        let waterScene = SKScene(size: waterSpriteNode.size)
+        waterScene.backgroundColor = .clear
+        waterScene.addChild(waterSpriteNode)
         let material = SCNMaterial()
-        material.diffuse.contents = color
-        let transparentMaterial = SCNMaterial()
-        transparentMaterial.diffuse.contents = [UIColor.init(white: 1.0, alpha: 0.0)]
-        self.planeGeometry.materials = [material,transparentMaterial,transparentMaterial,transparentMaterial,transparentMaterial,transparentMaterial]
+        material.transparency = 0.85
+        material.diffuse.contents = waterScene
+        self.planeGeometry.materials = [material]
         let planeNode = SCNNode(geometry: self.planeGeometry)
         planeNode.position = SCNVector3Make(anchor.center.x, anchor.center.y, anchor.center.z);
         planeNode.transform = SCNMatrix4MakeRotation(Float(-Double.pi / 2.0), 1.0, 0.0, 0.0);

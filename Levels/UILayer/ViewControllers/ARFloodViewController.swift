@@ -67,9 +67,10 @@ extension ARFloodViewController: ARSCNViewDelegate {
             print("Intial: \(plane.anchor.extent) UUID: \(planeAnchor.identifier)")
             node.addChildNode(plane)
         case .vertical:
-            let plane = PlaneNode(anchor: planeAnchor, color: UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: 0.7, blue: 0.7, alpha: 1.0))
-            buildingPlaneNodes.append(plane)
-            node.addChildNode(plane)
+//            let plane = PlaneNode(anchor: planeAnchor, color: UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: 0.7, blue: 0.7, alpha: 1.0))
+//            buildingPlaneNodes.append(plane)
+//            node.addChildNode(plane)
+//            break
             break
         }
     }
@@ -84,10 +85,11 @@ extension ARFloodViewController: ARSCNViewDelegate {
             print("Update: \(planeAnchor.extent) UUID: \(planeAnchor.identifier)")
             groundPlaneNode.update(anchor: planeAnchor)
         case .vertical:
-            guard let buildingPlaneNode = buildingPlaneNodes.first(where: { (node) -> Bool in
-                return node.anchor.identifier == planeAnchor.identifier
-            }) else { return }
-            buildingPlaneNode.update(anchor: planeAnchor)
+//            guard let buildingPlaneNode = buildingPlaneNodes.first(where: { (node) -> Bool in
+//                return node.anchor.identifier == planeAnchor.identifier
+//            }) else { return }
+//            buildingPlaneNode.update(anchor: planeAnchor)
+            break
         }
     }
 }
