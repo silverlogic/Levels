@@ -8,15 +8,10 @@ DEPENDENCIES:
   - AlertTransition/Trolley (~> 2.1.0)
   - VerticalSteppedSlider
 
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - AlertTransition
-    - VerticalSteppedSlider
-
 SPEC CHECKSUMS:
   AlertTransition: a5ebd60b8858b2530be539686bd301ec61e5634f
   VerticalSteppedSlider: c1513f095cda3d27e327de7fab6d3f8425a8dc46
 
 PODFILE CHECKSUM: 2000761d25365198f2623c338ed544a0fb660fa2
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.4.0
