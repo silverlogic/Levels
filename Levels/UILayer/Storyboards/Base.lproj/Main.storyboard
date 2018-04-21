@@ -137,6 +137,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doorSlider:" destination="0iV-3t-ACy" eventType="valueChanged" id="ECD-B7-0dP"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5KA-Ap-hi1" customClass="VSSlider" customModule="VerticalSteppedSlider">
                                 <rect key="frame" x="62" y="307" width="257" height="55"/>
@@ -178,6 +181,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="windowSlider:" destination="0iV-3t-ACy" eventType="valueChanged" id="0cd-S9-zyL"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RoX-Y6-JFe" customClass="VSSlider" customModule="VerticalSteppedSlider">
                                 <rect key="frame" x="62" y="399" width="257" height="55"/>
@@ -217,6 +223,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="slidingDoorSlider:" destination="0iV-3t-ACy" eventType="valueChanged" id="i8c-31-cSH"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gd-dR-NpW">
                                 <rect key="frame" x="16" y="79" width="343" height="54"/>

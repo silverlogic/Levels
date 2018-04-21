@@ -23,7 +23,19 @@ class SandbagCalculatorViewController: UIViewController, AlertFrameProtocol {
         return CGRect(x: 0, y: UIScreen.main.bounds.height - height, width: UIScreen.main.bounds.width, height: height)
     }
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+}
+
+
+// MARK: - IBActions
+extension SandbagCalculatorViewController {
+    @IBAction func doorSlider(_ sender: VSSlider) {
+    }
+    @IBAction func windowSlider(_ sender: VSSlider) {
+    }
+    @IBAction func slidingDoorSlider(_ sender: VSSlider) {
     }
 }
