@@ -11,11 +11,11 @@ import Foundation
 import SceneKit
 import ARKit
 
-final class PlaneNode: SCNNode {
+final class WaterNode: SCNNode {
     
     // MARK: - Public Instance Methods
-    var anchor :ARPlaneAnchor
-    var planeGeometry :SCNPlane!
+    var anchor: ARPlaneAnchor
+    var boxGeometry: SCNBox!
     
     
     // MARK: - Initializers
@@ -32,19 +32,20 @@ final class PlaneNode: SCNNode {
 
 
 // MARK: - Public Instance Methods
-extension PlaneNode {
+extension WaterNode {
     func update(anchor :ARPlaneAnchor) {
-        self.planeGeometry.width = CGFloat(anchor.extent.x);
-        self.planeGeometry.height = CGFloat(anchor.extent.z);
-        self.position = SCNVector3Make(anchor.center.x, 0, anchor.center.z);
+        self.boxGeometry.width = CGFloat(anchor.extent.x)
+        self.boxGeometry.height = 0.0435 * 8 //CGFloat(anchor.extent.y)
+        self.boxGeometry.length = CGFloat(anchor.extent.z)
+        self.position = SCNVector3Make(anchor.center.x, anchor.center.y, anchor.center.z);
     }
 }
 
 
 // MARK: - Private Instance Methods
-extension PlaneNode {
+extension WaterNode {
     private func setup(color: UIColor) {
-        self.planeGeometry = SCNPlane(width: CGFloat(self.anchor.extent.x), height: CGFloat(self.anchor.extent.z))
+        boxGeometry = SCNBox(width: CGFloat(self.anchor.extent.x), height: 0.05, length: CGFloat(self.anchor.extent.z), chamferRadius: 0)
         var frames: [SKTexture] = []
         for i in 0...9 {
             frames.append(SKTexture(imageNamed: "frame_0\(i)_delay-0.1s"))
@@ -59,10 +60,9 @@ extension PlaneNode {
         let material = SCNMaterial()
         material.transparency = 0.85
         material.diffuse.contents = waterScene
-        self.planeGeometry.materials = [material]
-        let planeNode = SCNNode(geometry: self.planeGeometry)
+        boxGeometry.materials = [material]
+        let planeNode = SCNNode(geometry: self.boxGeometry)
         planeNode.position = SCNVector3Make(anchor.center.x, anchor.center.y, anchor.center.z);
-        planeNode.transform = SCNMatrix4MakeRotation(Float(-Double.pi / 2.0), 1.0, 0.0, 0.0);
         self.addChildNode(planeNode)
     }
 }

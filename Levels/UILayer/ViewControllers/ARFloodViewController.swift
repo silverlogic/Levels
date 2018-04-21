@@ -22,8 +22,8 @@ class ARFloodViewController: UIViewController {
     private var arSession: ARSession! {
         return sceneView?.session
     }
-    private var groundPlaneNodes: [PlaneNode] = []
-    private var buildingPlaneNodes: [PlaneNode] = []
+    private var groundPlaneNodes: [WaterNode] = []
+    private var buildingPlaneNodes: [WaterNode] = []
     
     
     // MARK: - Lifecycle
@@ -60,36 +60,21 @@ extension ARFloodViewController: ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
-        switch planeAnchor.alignment {
-        case .horizontal:
-            let plane = PlaneNode(anchor: planeAnchor, color: UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: 0.7, blue: 0.7, alpha: 1.0))
+        if planeAnchor.alignment == .horizontal {
+            let plane = WaterNode(anchor: planeAnchor, color: UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: 0.7, blue: 0.7, alpha: 1.0))
             groundPlaneNodes.append(plane)
-            print("Intial: \(plane.anchor.extent) UUID: \(planeAnchor.identifier)")
             node.addChildNode(plane)
-        case .vertical:
-//            let plane = PlaneNode(anchor: planeAnchor, color: UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: 0.7, blue: 0.7, alpha: 1.0))
-//            buildingPlaneNodes.append(plane)
-//            node.addChildNode(plane)
-//            break
-            break
         }
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
-        switch planeAnchor.alignment {
-        case .horizontal:
+        if planeAnchor.alignment == .horizontal {
             guard let groundPlaneNode = groundPlaneNodes.first(where: { (node) -> Bool in
                 return node.anchor.identifier == planeAnchor.identifier
             }) else { return }
             print("Update: \(planeAnchor.extent) UUID: \(planeAnchor.identifier)")
             groundPlaneNode.update(anchor: planeAnchor)
-        case .vertical:
-//            guard let buildingPlaneNode = buildingPlaneNodes.first(where: { (node) -> Bool in
-//                return node.anchor.identifier == planeAnchor.identifier
-//            }) else { return }
-//            buildingPlaneNode.update(anchor: planeAnchor)
-            break
         }
     }
 }
