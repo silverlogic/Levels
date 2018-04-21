@@ -22,6 +22,8 @@ class ARFloodViewController: UIViewController {
     private var arSession: ARSession! {
         return sceneView?.session
     }
+    private var groundPlaneNodes: [PlaneNode] = []
+    private var buildingPlaneNodes: [PlaneNode] = []
     
     
     // MARK: - Lifecycle
@@ -45,15 +47,48 @@ class ARFloodViewController: UIViewController {
 // MARK: - ARSCNViewDelegate
 extension ARFloodViewController: ARSCNViewDelegate {
     func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
+        print("Error with session: \(error)")
     }
     
     func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
+        print("Session has been interrupted")
     }
     
     func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
+        print("Need reset")
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        switch planeAnchor.alignment {
+        case .horizontal:
+            let plane = PlaneNode(anchor: planeAnchor, color: UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: 0.7, blue: 0.7, alpha: 1.0))
+            groundPlaneNodes.append(plane)
+            print("Intial: \(plane.anchor.extent) UUID: \(planeAnchor.identifier)")
+            node.addChildNode(plane)
+        case .vertical:
+            let plane = PlaneNode(anchor: planeAnchor, color: UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: 0.7, blue: 0.7, alpha: 1.0))
+            buildingPlaneNodes.append(plane)
+            node.addChildNode(plane)
+            break
+        }
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        switch planeAnchor.alignment {
+        case .horizontal:
+            guard let groundPlaneNode = groundPlaneNodes.first(where: { (node) -> Bool in
+                return node.anchor.identifier == planeAnchor.identifier
+            }) else { return }
+            print("Update: \(planeAnchor.extent) UUID: \(planeAnchor.identifier)")
+            groundPlaneNode.update(anchor: planeAnchor)
+        case .vertical:
+            guard let buildingPlaneNode = buildingPlaneNodes.first(where: { (node) -> Bool in
+                return node.anchor.identifier == planeAnchor.identifier
+            }) else { return }
+            buildingPlaneNode.update(anchor: planeAnchor)
+        }
     }
 }
 
@@ -62,33 +97,8 @@ extension ARFloodViewController: ARSCNViewDelegate {
 private extension ARFloodViewController {
     func setupScene() {
         sceneView.delegate = self
-        sceneView.antialiasingMode = .multisampling4X
-        sceneView.automaticallyUpdatesLighting = false
-        if let camera = sceneView.pointOfView?.camera {
-            camera.wantsHDR = true
-            camera.exposureOffset = -1
-            camera.minimumExposure = -1
-        }
-        let scene = SCNScene()
-        sceneView.scene = scene
-        sceneView.autoenablesDefaultLighting = false
-        let lightNode = SCNNode()
-        let light = SCNLight()
-        light.type = SCNLight.LightType.ambient
-        light.color = UIColor(white: 0.72, alpha: 1.0)
-        lightNode.light = light
-        sceneView.scene.rootNode.addChildNode(lightNode)
-        self.lightNode = lightNode
-        if let pointOfView = sceneView.pointOfView {
-            let cameraLightNode = SCNNode()
-            let cameraLight = SCNLight()
-            cameraLight.type = SCNLight.LightType.omni
-            cameraLight.color = UIColor(white: 0.95, alpha: 1.0)
-            cameraLightNode.light = cameraLight
-            cameraLightNode.position = SCNVector3Make(0, 1.2, 1.2)
-            pointOfView.addChildNode(cameraLightNode)
-            self.cameraLightNode = lightNode
-        }
+        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+        self.sceneView.autoenablesDefaultLighting = true
     }
     
     func setupARSession() {
@@ -96,6 +106,6 @@ private extension ARFloodViewController {
         let configuration = ARWorldTrackingConfiguration()
         configuration.worldAlignment = .gravityAndHeading
         configuration.planeDetection = [.horizontal, .vertical]
-        arSession.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        arSession.run(configuration)
     }
 }
