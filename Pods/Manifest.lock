@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: 03f90744e25f10b4bffd3a9a03e1424f5ab2e0b6
+PODS:
+  - AlertTransition/Core (2.1.0)
+  - AlertTransition/Trolley (2.1.0):
+    - AlertTransition/Core
+  - VerticalSteppedSlider (0.1.0)
 
-COCOAPODS: 1.4.0
+DEPENDENCIES:
+  - AlertTransition/Trolley (~> 2.1.0)
+  - VerticalSteppedSlider
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AlertTransition
+    - VerticalSteppedSlider
+
+SPEC CHECKSUMS:
+  AlertTransition: a5ebd60b8858b2530be539686bd301ec61e5634f
+  VerticalSteppedSlider: c1513f095cda3d27e327de7fab6d3f8425a8dc46
+
+PODFILE CHECKSUM: 2000761d25365198f2623c338ed544a0fb660fa2
+
+COCOAPODS: 1.5.0

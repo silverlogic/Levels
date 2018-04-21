@@ -9,12 +9,13 @@
 import UIKit
 import SceneKit
 import ARKit
+import AlertTransition
 
 class ARFloodViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var sceneView: ARSCNView!
-    
+
     
     // Private Instance Attributes For AR
     private weak var lightNode: SCNNode!
@@ -40,6 +41,15 @@ class ARFloodViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
+    }
+}
+
+
+// MARK: - Public Instance Methods
+extension ARFloodViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination
+        controller.at.transition = TrolleyTransition()
     }
 }
 
@@ -94,5 +104,9 @@ private extension ARFloodViewController {
         configuration.worldAlignment = .gravityAndHeading
         configuration.planeDetection = [.horizontal, .vertical]
         arSession.run(configuration)
+    }
+
+    func showCalculatorPanel() {
+
     }
 }
