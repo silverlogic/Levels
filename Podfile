@@ -6,5 +6,7 @@ target 'Levels' do
   use_frameworks!
 
   # Pods for Levels
+  pod 'AlertTransition/Trolley', "~> 2.1.0"
+  pod 'VerticalSteppedSlider'
 
 end
