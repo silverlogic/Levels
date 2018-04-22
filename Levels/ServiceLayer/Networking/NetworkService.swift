@@ -53,16 +53,32 @@ final class NetworkService {
                 encoding: requestInfo.encoding.parameterEncoding(),
                 headers: requestInfo.headers
             )
-            .responseDecodableObject { (response: DataResponse<T>) in
-                guard response.error == nil else {
-                    seal.reject(response.error!)
-                    return
-                }
-                guard let value = response.result.value else {
-                    seal.reject(NetworkError.parse)
-                    return
-                }
-                seal.fulfill(value)
+//            .responseDecodableObject { (response: DataResponse<T>) in
+//                guard response.error == nil else {
+//                    seal.reject(response.error!)
+//                    return
+//                }
+//                guard let value = response.result.value else {
+//                    seal.reject(NetworkError.parse)
+//                    return
+//                }
+//                seal.fulfill(value)
+//            }
+                .validate()
+                .responseData { (response) in
+                    switch response.result {
+                    case .success(let value):
+                        do {
+                            let test = try JSONSerialization.jsonObject(with: value, options: []) as? [String: Any]
+                            let decoder = JSONDecoder()
+                            let pi = try decoder.decode(T.self, from: value)
+                            seal.fulfill(pi)
+                        } catch {
+                            seal.reject(error)
+                        }
+                    case .failure(let error):
+                        seal.reject(error)
+                    }
             }
         }
     }

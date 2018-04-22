@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Progress View Controller-->
+        <scene sceneID="1b1-Qf-pxO">
+            <objects>
+                <viewController storyboardIdentifier="ProgressViewController" id="yvT-kh-OpL" customClass="ProgressViewController" customModule="Levels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.65000000000000002" contentMode="scaleToFill" id="QG9-2u-MwJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress" translatesAutoresizingMaskIntoConstraints="NO" id="1Ol-1a-TAQ">
+                                <rect key="frame" x="123" y="269" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="E4I-2T-SDi"/>
+                                    <constraint firstAttribute="width" constant="128" id="LwW-sg-bZo"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Ol-1a-TAQ" firstAttribute="centerX" secondItem="QG9-2u-MwJ" secondAttribute="centerX" id="1YP-hp-gd9"/>
+                            <constraint firstItem="1Ol-1a-TAQ" firstAttribute="centerY" secondItem="QG9-2u-MwJ" secondAttribute="centerY" id="l9t-Ds-QdF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dix-qa-AXB"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressImageView" destination="1Ol-1a-TAQ" id="v9B-CX-PFG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a97-Ne-dPE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272.80000000000001" y="334.18290854572717"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="progress" width="1024" height="1024"/>
+    </resources>
+</document>

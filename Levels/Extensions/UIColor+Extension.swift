@@ -8,8 +8,8 @@
 
 import UIKit
 
-// MARK: - Private Class Attributes For Hex Values
-private extension UIColor {
+// MARK: - Public Class Attributes For Hex Values
+extension UIColor {
     @nonobjc static var lightTealHexValue: UInt = 0x29AAE1
     @nonobjc static var darkTealHexValue: UInt = 0x1B75BC
     @nonobjc static var lightBlueHexValue: UInt = 0xC3DDEE

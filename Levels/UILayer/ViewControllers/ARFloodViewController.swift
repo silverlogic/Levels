@@ -74,6 +74,15 @@ extension ARFloodViewController {
 }
 
 
+// MARK: - IBActions
+private extension ARFloodViewController {
+    @IBAction func myFamilyButtonTapped(sender: UIButton) {
+        let navigationController = UIStoryboard.loadIntialMyFamilyViewController()
+        present(navigationController, animated: true, completion: nil)
+    }
+}
+
+
 // MARK: - ARSCNViewDelegate
 extension ARFloodViewController: ARSCNViewDelegate {
     func session(_ session: ARSession, didFailWithError error: Error) {

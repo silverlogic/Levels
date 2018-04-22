@@ -55,7 +55,7 @@ final class Kairos {
             let baseString = imageData.base64EncodedString(options: .lineLength64Characters)
             let endpoint = Endpoints.enroll.endpoint()
             let parameters: [String: Any] = [
-                "image": baseString,
+                "image": "https://res.cloudinary.com/silverlogic/image/upload/v1524353938/rob_test1.jpg",
                 "gallery_name": "missing-persons",
                 "subject_id": named
             ]
