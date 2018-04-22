@@ -49,7 +49,8 @@ final class ARFloodViewController: UIViewController {
 // MARK: - Navigation
 extension ARFloodViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination
+        guard let controller = segue.destination as? SandbagCalculatorViewController else { return }
+        controller.surgeHeight = Double(surgeLevelSlider.value)
         controller.at.transition = TrolleyTransition()
     }
 }
