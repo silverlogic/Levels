@@ -36,13 +36,22 @@ final class Cloudinary {
                 return
             }
             guard let result = result,
+                  let homeIconWidth = 50
+                  let iconOffset = homeIconWidth + 5
                   let publicId = result.publicId,
                   let url = strongSelf.cloudinary.createUrl()
                 .setTransformation(CLDTransformation()
                 .setWidth(400).setHeight(600).setCrop(.fit).chain()
-                .setOverlay("assets:Sandbag").setGravity("north_east").setX(5).setY(5).setWidth(50).setOpacity(85).setEffect("brightness:200").chain()
-                .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(20).setText(text: String(sandbags))).setGravity("north_east").setX(20).setY(22).setColor("black").chain()
                 .setOverlay("assets:AppIcon").setGravity("south").setX(5).setY(5).setWidth(75).setOpacity(60).chain())
+                .setOverlay("assets:blue").setGravity("north_west").setFlags("relative").setWidth(1.0).setHeight(0.12).setOpacity(85).chain()
+                .setOverlay("assets:Sandbag").setGravity("north_east").setX(5).setY(5).setWidth(75).setOpacity(85).chain()
+                .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(30).setText(text: String(sandbags))).setGravity("north_east").setX(18).setY(30).setColor("black").chain()
+
+                .setOverlay("assets:Entrance_Ways_Arrow").setGravity("north_west").setX(5).setY(10).setOpacity(85).chain()
+                    .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(15).setText(text: String(sandbags))).setGravity("north_west").setX(8).setY(13).setColor("white").chain()
+                    .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(15).setText(text: String(sandbags))).setGravity("north_west").setX(63).setY(13).setColor("white").chain()
+                    .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(15).setText(text: String(sandbags))).setGravity("north_west").setX(115).setY(13).setColor("white").chain()
+                    .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(15).setText(text: String(sandbags))).setGravity("north_west").setX(169).setY(13).setColor("white").chain()
                 .generate(publicId) else {
                     completion(nil, error)
                     return
