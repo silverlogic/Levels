@@ -74,6 +74,8 @@ private extension WaterNode {
     
     func updateBoxHeight() {
         //SCNTransaction.animationDuration = 1.0
+        let height = 0.0435 * floodLevel
+        boxGeometry.materials.first?.transparency = height == 0.0 ? 0.0 : 1.0
         boxGeometry.height = 0.0435 * floodLevel
     }
 }

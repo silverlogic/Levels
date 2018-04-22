@@ -23,6 +23,10 @@ extension UIStoryboard {
     static func loadCaluculatorController() -> SandbagCalculatorViewController {
         return loadControllerFromMain(type: SandbagCalculatorViewController.self)
     }
+
+    static func loadShareImageViewController() -> ShareImageViewController {
+        return loadControllerFrom(.shareImage, type: ShareImageViewController.self)
+    }
 }
 
 
@@ -70,4 +74,5 @@ fileprivate extension UIStoryboard {
  */
 fileprivate enum Storyboard: String {
     case main = "Main"
+    case shareImage = "ShareImage"
 }

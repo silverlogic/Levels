@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Share Image View Controller-->
+        <scene sceneID="yfm-xg-hPK">
+            <objects>
+                <viewController storyboardIdentifier="ShareImageViewController" id="j2b-p5-mgV" customClass="ShareImageViewController" customModule="Levels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pj2-Hh-gm2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b4c-Ns-Nn9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD4-JQ-zrY">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.87058823529999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="z3W-Oa-sWt"/>
+                                </constraints>
+                                <state key="normal" image="button-share">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="j2b-p5-mgV" eventType="touchUpInside" id="TKW-w7-Scl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b4c-Ns-Nn9" firstAttribute="top" secondItem="mMm-eY-03X" secondAttribute="top" id="BWj-lm-HpG"/>
+                            <constraint firstItem="hD4-JQ-zrY" firstAttribute="top" secondItem="b4c-Ns-Nn9" secondAttribute="bottom" id="CQD-NX-rmg"/>
+                            <constraint firstItem="b4c-Ns-Nn9" firstAttribute="trailing" secondItem="mMm-eY-03X" secondAttribute="trailing" id="HbL-CK-dma"/>
+                            <constraint firstItem="hD4-JQ-zrY" firstAttribute="trailing" secondItem="mMm-eY-03X" secondAttribute="trailing" id="qtP-DH-906"/>
+                            <constraint firstItem="hD4-JQ-zrY" firstAttribute="leading" secondItem="mMm-eY-03X" secondAttribute="leading" id="qu5-17-gRm"/>
+                            <constraint firstItem="b4c-Ns-Nn9" firstAttribute="leading" secondItem="mMm-eY-03X" secondAttribute="leading" id="wXd-Bm-rnI"/>
+                            <constraint firstItem="hD4-JQ-zrY" firstAttribute="bottom" secondItem="mMm-eY-03X" secondAttribute="bottom" id="y8c-bI-nHZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mMm-eY-03X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mkf-AV-w61"/>
+                    <connections>
+                        <outlet property="shareImageView" destination="b4c-Ns-Nn9" id="04f-qA-Ep9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozK-SA-JlY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-share" width="1125" height="134"/>
+    </resources>
+</document>

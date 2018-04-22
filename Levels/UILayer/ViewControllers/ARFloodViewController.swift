@@ -17,6 +17,7 @@ final class ARFloodViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var sceneView: ARSCNView!
     @IBOutlet private weak var surgeLevelSlider: VSSlider!
+    @IBOutlet private weak var surgeLevelLabel: UILabel!
 
     
     // Private Instance Attributes For AR
@@ -26,6 +27,7 @@ final class ARFloodViewController: UIViewController {
         return sceneView?.session
     }
     private var groundPlaneNodes: [WaterNode] = []
+    private let cloudinary = Cloudinary()
     
     
     // MARK: - Lifecycle
@@ -52,6 +54,22 @@ extension ARFloodViewController {
         guard let controller = segue.destination as? SandbagCalculatorViewController else { return }
         controller.surgeHeight = Double(surgeLevelSlider.value)
         controller.at.transition = TrolleyTransition()
+        controller.shareImageClosure = { [weak self] (sandbags) in
+            guard let strongSelf = self else { return }
+            guard let view = UIApplication.shared.keyWindow else { return }
+            let screenshot = view.asImage(0.0, afterScreenUpdates: false)
+            guard let data = UIImageJPEGRepresentation(screenshot, 1.0) else { return }
+            strongSelf.cloudinary.createUploader(data, sandbags: sandbags, completion: { (url, error) in
+                guard let uploadUrl = url else { return }
+                strongSelf.cloudinary.createDownloader(uploadUrl, completion: { (image, error) in
+                    guard let downloadedImage = image else { return }
+                    let shareImageVC = UIStoryboard.loadShareImageViewController()
+                    shareImageVC.shareImage = downloadedImage
+                    shareImageVC.at.transition = TrolleyTransition()
+                    strongSelf.present(shareImageVC, animated: true, completion: nil)
+                })
+            })
+        }
     }
 }
 
@@ -94,6 +112,7 @@ extension ARFloodViewController: ARSCNViewDelegate {
 // MARK: - IBActions
 private extension ARFloodViewController {
     @IBAction func floodLevelSliderChanged(_ sender: VSSlider) {
+        surgeLevelLabel.text = "\(Int(surgeLevelSlider.value)) ft"
         groundPlaneNodes.forEach {
             $0.floodLevel = CGFloat(surgeLevelSlider.value)
         }
