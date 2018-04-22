@@ -19,11 +19,26 @@ enum NetworkError: Error {
 
 // MARK: - Request Object
 struct RequestInfo {
+    
+    // MARK: - Encoding Types
+    enum EncodingType {
+        case json
+        case query
+        
+        func parameterEncoding() -> ParameterEncoding {
+            switch self {
+            case .json:
+                return JSONEncoding()
+            case .query:
+                return URLEncoding()
+            }
+        }
+    }
     let url: URL
     let method: HTTPMethod
     let Parameters: Parameters?
     let headers: HTTPHeaders?
-    let encoding: ParameterEncoding
+    let encoding: EncodingType
 }
 
 
@@ -35,7 +50,7 @@ final class NetworkService {
                 requestInfo.url,
                 method: requestInfo.method,
                 parameters: requestInfo.Parameters,
-                encoding: requestInfo.encoding,
+                encoding: requestInfo.encoding.parameterEncoding(),
                 headers: requestInfo.headers
             )
             .responseDecodableObject { (response: DataResponse<T>) in
