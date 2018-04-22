@@ -21,11 +21,12 @@ final class SandbagCalculatorViewController: UIViewController {
 
 
     // MARK: - Private Instance Attributes
-    private var sandbagTotalCount: Int = 0
+    var sandbagTotalCount: Int = 0
 
 
     // MARK: - Public Instance Attributes
     var surgeHeight: Double = 0
+    var shareImageClosure: ((_ sandbags: Int) -> Void)?
 
 
     // MARK; - Lifecycle
@@ -55,6 +56,11 @@ extension SandbagCalculatorViewController {
     }
 
     @IBAction private func shareButtonTapped(_ sender: UIButton) {
+        guard let closure = shareImageClosure else { return }
+        dismiss(animated: true) { [weak self] in
+            guard let strongSelf = self else { return }
+            closure(strongSelf.sandbagTotalCount)
+        }
     }
 }
 
@@ -86,7 +92,8 @@ private extension SandbagCalculatorViewController {
         let bagsForDoors = ceil(widthOfDoors / 2.0) * ceil(height * (height + 1) / 4.0)
         let widthOfWindows = Double(windowsSlider.value) * 3.33
         let bagsForWindows = surgeHeight < 3 ? 0 : ceil(widthOfWindows / 2.0) * ceil(height * (height + 1) / 4.0)
-        sandbagTotalLabel.text = String(Int(bagsForDoors + bagsForWindows))
+        sandbagTotalCount = Int(bagsForDoors + bagsForWindows)
+        sandbagTotalLabel.text = String(sandbagTotalCount)
     }
 
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {

@@ -53,25 +53,37 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="increment">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="markColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
-                                        <real key="value" value="2"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="icon-slider30"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="icon-slider40-rotate"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="markColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="floodLevelSliderChanged:" destination="BV1-FR-VrT" eventType="valueChanged" id="8Fd-nx-bzW"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kd1-uj-sF7">
+                                <rect key="frame" x="16" y="211" width="42" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="CPx-uo-GlI"/>
+                                    <constraint firstAttribute="width" constant="42" id="LCg-rQ-Zz8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Kd1-uj-sF7" firstAttribute="leading" secondItem="BON-hF-JhR" secondAttribute="leading" constant="16" id="EYl-ps-FM8"/>
                             <constraint firstItem="tKR-1B-0Kz" firstAttribute="leading" secondItem="BON-hF-JhR" secondAttribute="leading" constant="16" id="Eib-VG-HNJ"/>
+                            <constraint firstItem="tKR-1B-0Kz" firstAttribute="top" secondItem="Kd1-uj-sF7" secondAttribute="bottom" constant="8" id="Ewh-Bt-vGW"/>
                             <constraint firstItem="tKR-1B-0Kz" firstAttribute="centerY" secondItem="Pyz-hC-HZ8" secondAttribute="centerY" id="L6w-7x-HUP"/>
                             <constraint firstItem="ytF-zC-nzo" firstAttribute="top" secondItem="Pyz-hC-HZ8" secondAttribute="top" id="MLr-YK-c3g"/>
                             <constraint firstItem="ytF-zC-nzo" firstAttribute="leading" secondItem="BON-hF-JhR" secondAttribute="leading" id="SKZ-gV-enJ"/>
@@ -84,12 +96,13 @@
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="ytF-zC-nzo" id="CrW-hw-ekV"/>
+                        <outlet property="surgeLevelLabel" destination="Kd1-uj-sF7" id="cCM-Wu-aAn"/>
                         <outlet property="surgeLevelSlider" destination="tKR-1B-0Kz" id="Cpa-f9-raB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
         </scene>
         <!--Sandbag Calculator View Controller-->
         <scene sceneID="1id-T7-FEi">
@@ -274,13 +287,13 @@
                                     <action selector="slidingDoorSlider:" destination="0iV-3t-ACy" eventType="valueChanged" id="i8c-31-cSH"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1o6-nV-1wA">
-                                <rect key="frame" x="325" y="52" width="40" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1o6-nV-1wA">
+                                <rect key="frame" x="325" y="52" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8hF-5M-5Wj"/>
+                                    <constraint firstAttribute="height" constant="40" id="8hF-5M-5Wj"/>
                                     <constraint firstAttribute="width" constant="40" id="zQq-vk-PjW"/>
                                 </constraints>
-                                <state key="normal" title="Share">
+                                <state key="normal" image="icon-annotate-white">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -493,9 +506,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-annotate-white" width="40" height="40"/>
         <image name="icon-calculator-background" width="1125" height="2436"/>
         <image name="icon-calculator-white" width="50" height="50"/>
         <image name="icon-sandbag" width="75" height="50"/>
         <image name="icon-slider30" width="30" height="30"/>
+        <image name="icon-slider40-rotate" width="40" height="40"/>
     </resources>
 </document>
