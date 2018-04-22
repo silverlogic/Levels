@@ -1,17 +1,28 @@
 PODS:
+  - Alamofire (4.7.2)
   - AlertTransition/Core (2.1.0)
   - AlertTransition/Trolley (2.1.0):
     - AlertTransition/Core
+  - CodableAlamofire (1.1.0):
+    - Alamofire (~> 4.0)
+  - PromiseKit/CorePromise (6.2.4)
+  - PromiseKit/MapKit (6.2.4):
+    - PromiseKit/CorePromise
   - VerticalSteppedSlider (0.1.0)
 
 DEPENDENCIES:
   - AlertTransition/Trolley (~> 2.1.0)
+  - CodableAlamofire (~> 1.1.0)
+  - PromiseKit/MapKit (~> 6.2.3)
   - VerticalSteppedSlider
 
 SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AlertTransition: a5ebd60b8858b2530be539686bd301ec61e5634f
+  CodableAlamofire: e2d2edcec7cf413f7862c30c8fa98eded27a83f9
+  PromiseKit: 625b1fc69944fc839503748101c5968cf54b527b
   VerticalSteppedSlider: c1513f095cda3d27e327de7fab6d3f8425a8dc46
 
-PODFILE CHECKSUM: 2000761d25365198f2623c338ed544a0fb660fa2
+PODFILE CHECKSUM: adcf5631c9b9c8f01ceaf1b9a36bb83295b4e69e
 
 COCOAPODS: 1.4.0

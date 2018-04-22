@@ -18,6 +18,12 @@
 		888494D9208B872E00B980C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888494D7208B872E00B980C7 /* Main.storyboard */; };
 		888494DB208B872F00B980C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888494DA208B872F00B980C7 /* Assets.xcassets */; };
 		888494DE208B872F00B980C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888494DC208B872F00B980C7 /* LaunchScreen.storyboard */; };
+		88F13928208C0A7600C819C2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13927208C0A7600C819C2 /* NetworkService.swift */; };
+		88F1392A208C17CC00C819C2 /* KairosEnrollTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13929208C17CC00C819C2 /* KairosEnrollTransaction.swift */; };
+		88F1392C208C1A5C00C819C2 /* KairosAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1392B208C1A5C00C819C2 /* KairosAttributes.swift */; };
+		88F1392E208C1B8400C819C2 /* KairosEnrollImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1392D208C1B8400C819C2 /* KairosEnrollImage.swift */; };
+		88F13930208C1E9400C819C2 /* Kairos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1392F208C1E9400C819C2 /* Kairos.swift */; };
+		88F13932208C1F1700C819C2 /* KairosEnrollResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		888494DD208B872F00B980C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		888494DF208B872F00B980C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		888494F1208BB22500B980C7 /* WaterNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterNode.swift; sourceTree = "<group>"; };
+		88F13927208C0A7600C819C2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		88F13929208C17CC00C819C2 /* KairosEnrollTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosEnrollTransaction.swift; sourceTree = "<group>"; };
+		88F1392B208C1A5C00C819C2 /* KairosAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosAttributes.swift; sourceTree = "<group>"; };
+		88F1392D208C1B8400C819C2 /* KairosEnrollImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosEnrollImage.swift; sourceTree = "<group>"; };
+		88F1392F208C1E9400C819C2 /* Kairos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kairos.swift; sourceTree = "<group>"; };
+		88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosEnrollResult.swift; sourceTree = "<group>"; };
 		BAE28CA89506F9F4085524DE /* Pods-Levels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Levels/Pods-Levels.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +168,10 @@
 		888494EC208B87D800B980C7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				88F13929208C17CC00C819C2 /* KairosEnrollTransaction.swift */,
+				88F1392B208C1A5C00C819C2 /* KairosAttributes.swift */,
+				88F1392D208C1B8400C819C2 /* KairosEnrollImage.swift */,
+				88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -163,6 +179,7 @@
 		888494ED208B87E200B980C7 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				88F1392F208C1E9400C819C2 /* Kairos.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -170,6 +187,7 @@
 		888494EE208B87F500B980C7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				88F13927208C0A7600C819C2 /* NetworkService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -287,12 +305,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Levels/Pods-Levels-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlertTransition/AlertTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/VerticalSteppedSlider/VerticalSteppedSlider.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlertTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VerticalSteppedSlider.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,12 +346,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F13930208C1E9400C819C2 /* Kairos.swift in Sources */,
+				88F1392E208C1B8400C819C2 /* KairosEnrollImage.swift in Sources */,
+				88F1392C208C1A5C00C819C2 /* KairosAttributes.swift in Sources */,
+				88F13932208C1F1700C819C2 /* KairosEnrollResult.swift in Sources */,
 				2208C7BB208BE8180025D22B /* WaterNode.swift in Sources */,
+				88F1392A208C17CC00C819C2 /* KairosEnrollTransaction.swift in Sources */,
 				888494D6208B872E00B980C7 /* ARFloodViewController.swift in Sources */,
 				2208C7BA208BDD300025D22B /* SandbagCalculatorViewController.swift in Sources */,
 				2208C7B6208BDC130025D22B /* UIStoryboard+Extension.swift in Sources */,
 				2208C7B8208BDC900025D22B /* UIViewController+Extension.swift in Sources */,
 				888494D2208B872E00B980C7 /* AppDelegate.swift in Sources */,
+				88F13928208C0A7600C819C2 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +505,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SB3F2S2K3;
 				INFOPLIST_FILE = Levels/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.Levels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -491,7 +524,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SB3F2S2K3;
 				INFOPLIST_FILE = Levels/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.Levels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
