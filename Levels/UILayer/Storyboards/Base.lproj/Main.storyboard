@@ -76,7 +76,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="floodLevelSliderChanged:" destination="BV1-FR-VrT" eventType="valueChanged" id="8Fd-nx-bzW"/>
-                                    <action selector="windowSlider:" destination="0iV-3t-ACy" eventType="valueChanged" id="p6b-Pa-JRy"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -95,6 +94,7 @@
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="ytF-zC-nzo" id="CrW-hw-ekV"/>
+                        <outlet property="surgeLevelSlider" destination="tKR-1B-0Kz" id="Cpa-f9-raB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
