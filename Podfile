@@ -6,7 +6,9 @@ target 'Levels' do
   use_frameworks!
 
   # Pods for Levels
-  pod 'AlertTransition/Trolley', "~> 2.1.0"
+  pod 'CodableAlamofire', '~> 1.1.0'
+  pod 'AlertTransition/Trolley', '~> 2.1.0'
+  pod 'PromiseKit/MapKit', '~> 6.2.3'
   pod 'VerticalSteppedSlider'
 
 end
