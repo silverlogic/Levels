@@ -16,30 +16,45 @@ final class SandbagCalculatorViewController: UIViewController {
     @IBOutlet private weak var doorsSlider: VSSlider!
     @IBOutlet private weak var windowsSlider: VSSlider!
     @IBOutlet private weak var slidingDoorsSlider: VSSlider!
+    @IBOutlet private weak var garageDoorSlider: VSSlider!
     @IBOutlet private weak var sandbagTotalLabel: UILabel!
 
+
     // MARK: - Private Instance Attributes
+    private var sandbagTotalCount: Int = 0
+
+
+    // MARK: - Public Instance Attributes
+    var surgeHeight: Double = 0
 
 
     // MARK; - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
 }
 
 
 // MARK: - IBActions
 extension SandbagCalculatorViewController {
-    @IBAction func doorSlider(_ sender: VSSlider) {
+    @IBAction private func doorSlider(_ sender: VSSlider) {
+        calculateBags()
     }
 
-    @IBAction func windowSlider(_ sender: VSSlider) {
+    @IBAction private func windowSlider(_ sender: VSSlider) {
+        calculateBags()
     }
 
-    @IBAction func slidingDoorSlider(_ sender: VSSlider) {
+    @IBAction private func slidingDoorSlider(_ sender: VSSlider) {
+        calculateBags()
     }
 
-    @IBAction func shareButtonTapped(_ sender: UIButton) {
+    @IBAction func garageDoorSlider(_ sender: VSSlider) {
+        calculateBags()
+    }
+
+    @IBAction private func shareButtonTapped(_ sender: UIButton) {
     }
 }
 
@@ -47,7 +62,40 @@ extension SandbagCalculatorViewController {
 // MARK: - AlertFrameProtocol
 extension SandbagCalculatorViewController: AlertFrameProtocol {
     var alertFrame: CGRect {
-        let height = UIScreen.main.bounds.width / 638 * 836
+        let height = UIScreen.main.bounds.width / 638 * 1000
         return CGRect(x: 0, y: UIScreen.main.bounds.height - height, width: UIScreen.main.bounds.width, height: height)
+    }
+}
+
+
+// MARK: - Private Instance Methods
+private extension SandbagCalculatorViewController {
+
+    func setup() {
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
+        swipeDown.direction = .down
+        view.addGestureRecognizer(swipeDown)
+        sandbagTotalLabel.text = String(sandbagTotalCount)
+        calculateBags()
+    }
+
+    /// Build a dike at least 1 foot higher than the projected crest level to allow for fluctuations.
+    func calculateBags() {
+        let height = surgeHeight + 1
+        let widthOfDoors = ((Double(slidingDoorsSlider.value) * 2.0) + (Double(garageDoorSlider.value) * 2.0) + Double(doorsSlider.value)) * 4.0
+        let bagsForDoors = ceil(widthOfDoors / 2.0) * ceil(height * (height + 1) / 4.0)
+        let widthOfWindows = Double(windowsSlider.value) * 3.33
+        let bagsForWindows = surgeHeight < 3 ? 0 : ceil(widthOfWindows / 2.0) * ceil(height * (height + 1) / 4.0)
+        sandbagTotalLabel.text = String(Int(bagsForDoors + bagsForWindows))
+    }
+
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        guard let swipeGesture = gesture as? UISwipeGestureRecognizer else { return }
+        switch swipeGesture.direction {
+        case .down:
+            dismiss(animated: true, completion: nil)
+        default:
+            break
+        }
     }
 }

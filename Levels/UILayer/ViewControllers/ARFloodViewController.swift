@@ -16,6 +16,7 @@ final class ARFloodViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var sceneView: ARSCNView!
+    @IBOutlet private weak var surgeLevelSlider: VSSlider!
 
     
     // Private Instance Attributes For AR
@@ -48,7 +49,8 @@ final class ARFloodViewController: UIViewController {
 // MARK: - Navigation
 extension ARFloodViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination
+        guard let controller = segue.destination as? SandbagCalculatorViewController else { return }
+        controller.surgeHeight = Double(surgeLevelSlider.value)
         controller.at.transition = TrolleyTransition()
     }
 }
@@ -93,7 +95,7 @@ extension ARFloodViewController: ARSCNViewDelegate {
 private extension ARFloodViewController {
     @IBAction func floodLevelSliderChanged(_ sender: VSSlider) {
         groundPlaneNodes.forEach {
-            $0.floodLevel = CGFloat(sender.value)
+            $0.floodLevel = CGFloat(surgeLevelSlider.value)
         }
     }
 }
