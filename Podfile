@@ -14,6 +14,8 @@ target 'Levels' do
   pod 'UITextField+Shake', '~> 1.1'
   pod 'VerticalSteppedSlider'
 
+  target 'Shelter' do
+  end
 end
 
 post_install do |installer|

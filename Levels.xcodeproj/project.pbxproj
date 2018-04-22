@@ -16,6 +16,56 @@
 		2208C7C9208C45FC0025D22B /* ShareImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C7C8208C45FC0025D22B /* ShareImageViewController.swift */; };
 		2208C7CB208C49EB0025D22B /* UIStoryboardSegue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C7CA208C49EB0025D22B /* UIStoryboardSegue+Extension.swift */; };
 		2208C80E208C8BAF0025D22B /* SandbagAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C80D208C8BAF0025D22B /* SandbagAttributes.swift */; };
+		2208C810208C94D30025D22B /* ProcessInfo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C80F208C94D30025D22B /* ProcessInfo+Extension.swift */; };
+		2208C848208C95C20025D22B /* ShelterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C847208C95C20025D22B /* ShelterViewController.swift */; };
+		224593AF208CA507007A7C08 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13943208C4D2200C819C2 /* UICollectionView+Extension.swift */; };
+		224593B0208CA507007A7C08 /* ImageAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1394E208C50D900C819C2 /* ImageAccess.swift */; };
+		224593B1208CA507007A7C08 /* MyFriendCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1393E208C4BE400C819C2 /* MyFriendCollectionViewLayout.swift */; };
+		224593B2208CA507007A7C08 /* Kairos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1392F208C1E9400C819C2 /* Kairos.swift */; };
+		224593B3208CA507007A7C08 /* SandbagAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C80D208C8BAF0025D22B /* SandbagAttributes.swift */; };
+		224593B4208CA507007A7C08 /* FamilyTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13956208C5B1900C819C2 /* FamilyTracker.swift */; };
+		224593B5208CA507007A7C08 /* KairosEnrollImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1392D208C1B8400C819C2 /* KairosEnrollImage.swift */; };
+		224593B6208CA507007A7C08 /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13941208C4C8600C819C2 /* Resuable.swift */; };
+		224593B7208CA507007A7C08 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13938208C43A200C819C2 /* UIImageView+Extension.swift */; };
+		224593B8208CA507007A7C08 /* ProcessInfo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C80F208C94D30025D22B /* ProcessInfo+Extension.swift */; };
+		224593B9208CA507007A7C08 /* FamilyMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1394C208C4F5800C819C2 /* FamilyMemberCollectionViewCell.swift */; };
+		224593BA208CA507007A7C08 /* KairosAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1392B208C1A5C00C819C2 /* KairosAttributes.swift */; };
+		224593BB208CA507007A7C08 /* KairosEnrollResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */; };
+		224593BC208CA507007A7C08 /* WaterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888494F1208BB22500B980C7 /* WaterNode.swift */; };
+		224593BD208CA507007A7C08 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13958208C631900C819C2 /* UIView+Extension.swift */; };
+		224593BE208CA507007A7C08 /* KairosEnrollTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13929208C17CC00C819C2 /* KairosEnrollTransaction.swift */; };
+		224593BF208CA507007A7C08 /* ARFloodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888494D5208B872E00B980C7 /* ARFloodViewController.swift */; };
+		224593C0208CA507007A7C08 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13945208C4D5F00C819C2 /* Array+Extension.swift */; };
+		224593C1208CA507007A7C08 /* ShelterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C847208C95C20025D22B /* ShelterViewController.swift */; };
+		224593C2208CA507007A7C08 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C7C1208C28D90025D22B /* Cloudinary.swift */; };
+		224593C3208CA507007A7C08 /* SandbagCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C7B9208BDD300025D22B /* SandbagCalculatorViewController.swift */; };
+		224593C4208CA507007A7C08 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13950208C51B400C819C2 /* UIColor+Extension.swift */; };
+		224593C5208CA507007A7C08 /* KairosRecognizeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13933208C2F6600C819C2 /* KairosRecognizeResult.swift */; };
+		224593C6208CA507007A7C08 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1394A208C4F1400C819C2 /* BaseCollectionView.swift */; };
+		224593C7208CA507007A7C08 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C7B5208BDC130025D22B /* UIStoryboard+Extension.swift */; };
+		224593C8208CA507007A7C08 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C7B7208BDC900025D22B /* UIViewController+Extension.swift */; };
+		224593C9208CA507007A7C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888494D1208B872E00B980C7 /* AppDelegate.swift */; };
+		224593CA208CA507007A7C08 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1393B208C44E700C819C2 /* CircleImageView.swift */; };
+		224593CB208CA507007A7C08 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13927208C0A7600C819C2 /* NetworkService.swift */; };
+		224593CC208CA507007A7C08 /* MyFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13952208C554900C819C2 /* MyFamilyViewController.swift */; };
+		224593CD208CA507007A7C08 /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13948208C4E9200C819C2 /* FamilyMember.swift */; };
+		224593CE208CA507007A7C08 /* ShareImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C7C8208C45FC0025D22B /* ShareImageViewController.swift */; };
+		224593CF208CA507007A7C08 /* UIStoryboardSegue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C7CA208C49EB0025D22B /* UIStoryboardSegue+Extension.swift */; };
+		224593D3208CA507007A7C08 /* MyFamily.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F13935208C3CAC00C819C2 /* MyFamily.storyboard */; };
+		224593D4208CA507007A7C08 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 888494D3208B872E00B980C7 /* art.scnassets */; };
+		224593D5208CA507007A7C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888494DC208B872F00B980C7 /* LaunchScreen.storyboard */; };
+		224593D6208CA507007A7C08 /* familymembers.json in Resources */ = {isa = PBXBuildFile; fileRef = 88F13954208C585300C819C2 /* familymembers.json */; };
+		224593D7208CA507007A7C08 /* ShareImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2208C7C5208C453D0025D22B /* ShareImage.storyboard */; };
+		224593D8208CA507007A7C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888494DA208B872F00B980C7 /* Assets.xcassets */; };
+		224593D9208CA507007A7C08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888494D7208B872E00B980C7 /* Main.storyboard */; };
+		224593E0208CA5EF007A7C08 /* Shelter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2208C844208C95B00025D22B /* Shelter.storyboard */; };
+		224593E3208CA6BF007A7C08 /* ShelterResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224593E1208CA6BD007A7C08 /* ShelterResultsViewController.swift */; };
+		224593E4208CA6C5007A7C08 /* ShelterResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224593E1208CA6BD007A7C08 /* ShelterResultsViewController.swift */; };
+		224593E5208CB675007A7C08 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13964208C7DA300C819C2 /* CameraHandler.swift */; };
+		224593E6208CB678007A7C08 /* BaseAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1395F208C760300C819C2 /* BaseAlertViewController.swift */; };
+		224593E7208CB689007A7C08 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13961208C775600C819C2 /* UIFont+Extension.swift */; };
+		224593E8208CB694007A7C08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1395A208C708800C819C2 /* ProgressViewController.swift */; };
+		7A12F02D2356DDB9820296D4 /* Pods_Levels_Shelter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224B030C840D23B1B83043B3 /* Pods_Levels_Shelter.framework */; };
 		85C6F07B6FB08153603A65BD /* Pods_Levels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C528AD5D296FC7890F3B61 /* Pods_Levels.framework */; };
 		888494D2208B872E00B980C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888494D1208B872E00B980C7 /* AppDelegate.swift */; };
 		888494D4208B872E00B980C7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 888494D3208B872E00B980C7 /* art.scnassets */; };
@@ -51,9 +101,11 @@
 		88F13960208C760300C819C2 /* BaseAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1395F208C760300C819C2 /* BaseAlertViewController.swift */; };
 		88F13962208C775600C819C2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13961208C775600C819C2 /* UIFont+Extension.swift */; };
 		88F13965208C7DA300C819C2 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13964208C7DA300C819C2 /* CameraHandler.swift */; };
+		A311C8156D5E8035AE6A00D9 /* Pods_Levels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C528AD5D296FC7890F3B61 /* Pods_Levels.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F2D4BE875932E4C0210360A /* Pods-Levels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Levels/Pods-Levels.debug.xcconfig"; sourceTree = "<group>"; };
 		2208C7B5208BDC130025D22B /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		2208C7B7208BDC900025D22B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		2208C7B9208BDD300025D22B /* SandbagCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandbagCalculatorViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +115,17 @@
 		2208C7C8208C45FC0025D22B /* ShareImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareImageViewController.swift; sourceTree = "<group>"; };
 		2208C7CA208C49EB0025D22B /* UIStoryboardSegue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+Extension.swift"; sourceTree = "<group>"; };
 		2208C80D208C8BAF0025D22B /* SandbagAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandbagAttributes.swift; sourceTree = "<group>"; };
-		7B60D6EDC12D214B12DDC25E /* Pods-Levels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels.release.xcconfig"; path = "Pods/Target Support Files/Pods-Levels/Pods-Levels.release.xcconfig"; sourceTree = "<group>"; };
+		2208C80F208C94D30025D22B /* ProcessInfo+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Extension.swift"; sourceTree = "<group>"; };
+		2208C843208C95130025D22B /* Shelter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Shelter-Info.plist"; path = "/Users/shaunbevan/Developer/Levels/Shelter-Info.plist"; sourceTree = "<absolute>"; };
+		2208C845208C95B00025D22B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Shelter.storyboard; sourceTree = "<group>"; };
+		2208C847208C95C20025D22B /* ShelterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterViewController.swift; sourceTree = "<group>"; };
+		224593AA208CA4E5007A7C08 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		224593DE208CA507007A7C08 /* Shelter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shelter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		224593E1208CA6BD007A7C08 /* ShelterResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterResultsViewController.swift; sourceTree = "<group>"; };
+		224B030C840D23B1B83043B3 /* Pods_Levels_Shelter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Levels_Shelter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		505CFA900187F86A5C32DA5F /* Pods-Levels-Shelter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels-Shelter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Levels-Shelter/Pods-Levels-Shelter.release.xcconfig"; sourceTree = "<group>"; };
+		5CCD0A1444FBF1F886611A8E /* Pods-Levels-Shelter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels-Shelter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Levels-Shelter/Pods-Levels-Shelter.debug.xcconfig"; sourceTree = "<group>"; };
+		792801ABE163BC5B29A832FA /* Pods-Levels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels.release.xcconfig"; path = "Pods/Target Support Files/Pods-Levels/Pods-Levels.release.xcconfig"; sourceTree = "<group>"; };
 		80C528AD5D296FC7890F3B61 /* Pods_Levels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Levels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888494CE208B872E00B980C7 /* Levels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Levels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888494D1208B872E00B980C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,15 +164,23 @@
 		88F1395F208C760300C819C2 /* BaseAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAlertViewController.swift; sourceTree = "<group>"; };
 		88F13961208C775600C819C2 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		88F13964208C7DA300C819C2 /* CameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
-		BAE28CA89506F9F4085524DE /* Pods-Levels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Levels/Pods-Levels.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		224593D0208CA507007A7C08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A12F02D2356DDB9820296D4 /* Pods_Levels_Shelter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		888494CB208B872E00B980C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				85C6F07B6FB08153603A65BD /* Pods_Levels.framework in Frameworks */,
+				A311C8156D5E8035AE6A00D9 /* Pods_Levels.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,8 +198,10 @@
 		419F5AB9F3A709C7DF472FD6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BAE28CA89506F9F4085524DE /* Pods-Levels.debug.xcconfig */,
-				7B60D6EDC12D214B12DDC25E /* Pods-Levels.release.xcconfig */,
+				0F2D4BE875932E4C0210360A /* Pods-Levels.debug.xcconfig */,
+				792801ABE163BC5B29A832FA /* Pods-Levels.release.xcconfig */,
+				5CCD0A1444FBF1F886611A8E /* Pods-Levels-Shelter.debug.xcconfig */,
+				505CFA900187F86A5C32DA5F /* Pods-Levels-Shelter.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -137,7 +209,9 @@
 		67F0EDC3C08D35665E93CA6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				224593AA208CA4E5007A7C08 /* PromiseKit.framework */,
 				80C528AD5D296FC7890F3B61 /* Pods_Levels.framework */,
+				224B030C840D23B1B83043B3 /* Pods_Levels_Shelter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +224,7 @@
 				419F5AB9F3A709C7DF472FD6 /* Pods */,
 				67F0EDC3C08D35665E93CA6E /* Frameworks */,
 				2208C7D0208C6D200025D22B /* Recovered References */,
+				2208C843208C95130025D22B /* Shelter-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				888494CE208B872E00B980C7 /* Levels.app */,
+				224593DE208CA507007A7C08 /* Shelter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,6 +289,7 @@
 				88F13935208C3CAC00C819C2 /* MyFamily.storyboard */,
 				2208C7C5208C453D0025D22B /* ShareImage.storyboard */,
 				88F1395C208C70B300C819C2 /* Progress.storyboard */,
+				2208C844208C95B00025D22B /* Shelter.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -238,6 +315,8 @@
 				88F13952208C554900C819C2 /* MyFamilyViewController.swift */,
 				2208C7C8208C45FC0025D22B /* ShareImageViewController.swift */,
 				88F1395A208C708800C819C2 /* ProgressViewController.swift */,
+				2208C847208C95C20025D22B /* ShelterViewController.swift */,
+				224593E1208CA6BD007A7C08 /* ShelterResultsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -294,6 +373,7 @@
 				88F13958208C631900C819C2 /* UIView+Extension.swift */,
 				2208C7CA208C49EB0025D22B /* UIStoryboardSegue+Extension.swift */,
 				88F13961208C775600C819C2 /* UIFont+Extension.swift */,
+				2208C80F208C94D30025D22B /* ProcessInfo+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +431,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		224593AC208CA507007A7C08 /* Shelter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224593DB208CA507007A7C08 /* Build configuration list for PBXNativeTarget "Shelter" */;
+			buildPhases = (
+				6D41EA1FA9936E89171AADCE /* [CP] Check Pods Manifest.lock */,
+				224593AE208CA507007A7C08 /* Sources */,
+				224593D0208CA507007A7C08 /* Frameworks */,
+				224593D2208CA507007A7C08 /* Resources */,
+				CD3E7EE471853E802A02F043 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shelter;
+			productName = Levels;
+			productReference = 224593DE208CA507007A7C08 /* Shelter.app */;
+			productType = "com.apple.product-type.application";
+		};
 		888494CD208B872E00B980C7 /* Levels */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 888494E2208B872F00B980C7 /* Build configuration list for PBXNativeTarget "Levels" */;
@@ -360,7 +459,6 @@
 				888494CB208B872E00B980C7 /* Frameworks */,
 				888494CC208B872E00B980C7 /* Resources */,
 				80C7DBB85574351186D7507D /* [CP] Embed Pods Frameworks */,
-				E174F09C0FB815418C576FDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -400,11 +498,27 @@
 			projectRoot = "";
 			targets = (
 				888494CD208B872E00B980C7 /* Levels */,
+				224593AC208CA507007A7C08 /* Shelter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		224593D2208CA507007A7C08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224593E0208CA5EF007A7C08 /* Shelter.storyboard in Resources */,
+				224593D3208CA507007A7C08 /* MyFamily.storyboard in Resources */,
+				224593D4208CA507007A7C08 /* art.scnassets in Resources */,
+				224593D5208CA507007A7C08 /* LaunchScreen.storyboard in Resources */,
+				224593D6208CA507007A7C08 /* familymembers.json in Resources */,
+				224593D7208CA507007A7C08 /* ShareImage.storyboard in Resources */,
+				224593D8208CA507007A7C08 /* Assets.xcassets in Resources */,
+				224593D9208CA507007A7C08 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		888494CC208B872E00B980C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,6 +549,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Levels-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D41EA1FA9936E89171AADCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Levels-Shelter-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -477,24 +609,90 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Levels/Pods-Levels-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E174F09C0FB815418C576FDF /* [CP] Copy Pods Resources */ = {
+		CD3E7EE471853E802A02F043 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Levels-Shelter/Pods-Levels-Shelter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlertTransition/AlertTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/Cloudinary/Cloudinary.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Presentr/Presentr.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextField+Shake/UITextField_Shake.framework",
+				"${BUILT_PRODUCTS_DIR}/VerticalSteppedSlider/VerticalSteppedSlider.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlertTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cloudinary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Presentr.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextField_Shake.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VerticalSteppedSlider.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Levels/Pods-Levels-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Levels-Shelter/Pods-Levels-Shelter-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		224593AE208CA507007A7C08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224593AF208CA507007A7C08 /* UICollectionView+Extension.swift in Sources */,
+				224593B0208CA507007A7C08 /* ImageAccess.swift in Sources */,
+				224593B1208CA507007A7C08 /* MyFriendCollectionViewLayout.swift in Sources */,
+				224593B2208CA507007A7C08 /* Kairos.swift in Sources */,
+				224593B3208CA507007A7C08 /* SandbagAttributes.swift in Sources */,
+				224593B4208CA507007A7C08 /* FamilyTracker.swift in Sources */,
+				224593B5208CA507007A7C08 /* KairosEnrollImage.swift in Sources */,
+				224593B6208CA507007A7C08 /* Resuable.swift in Sources */,
+				224593B7208CA507007A7C08 /* UIImageView+Extension.swift in Sources */,
+				224593B8208CA507007A7C08 /* ProcessInfo+Extension.swift in Sources */,
+				224593B9208CA507007A7C08 /* FamilyMemberCollectionViewCell.swift in Sources */,
+				224593E8208CB694007A7C08 /* ProgressViewController.swift in Sources */,
+				224593BA208CA507007A7C08 /* KairosAttributes.swift in Sources */,
+				224593E7208CB689007A7C08 /* UIFont+Extension.swift in Sources */,
+				224593BB208CA507007A7C08 /* KairosEnrollResult.swift in Sources */,
+				224593E3208CA6BF007A7C08 /* ShelterResultsViewController.swift in Sources */,
+				224593BC208CA507007A7C08 /* WaterNode.swift in Sources */,
+				224593BD208CA507007A7C08 /* UIView+Extension.swift in Sources */,
+				224593BE208CA507007A7C08 /* KairosEnrollTransaction.swift in Sources */,
+				224593BF208CA507007A7C08 /* ARFloodViewController.swift in Sources */,
+				224593C0208CA507007A7C08 /* Array+Extension.swift in Sources */,
+				224593C1208CA507007A7C08 /* ShelterViewController.swift in Sources */,
+				224593C2208CA507007A7C08 /* Cloudinary.swift in Sources */,
+				224593E5208CB675007A7C08 /* CameraHandler.swift in Sources */,
+				224593E6208CB678007A7C08 /* BaseAlertViewController.swift in Sources */,
+				224593C3208CA507007A7C08 /* SandbagCalculatorViewController.swift in Sources */,
+				224593C4208CA507007A7C08 /* UIColor+Extension.swift in Sources */,
+				224593C5208CA507007A7C08 /* KairosRecognizeResult.swift in Sources */,
+				224593C6208CA507007A7C08 /* BaseCollectionView.swift in Sources */,
+				224593C7208CA507007A7C08 /* UIStoryboard+Extension.swift in Sources */,
+				224593C8208CA507007A7C08 /* UIViewController+Extension.swift in Sources */,
+				224593C9208CA507007A7C08 /* AppDelegate.swift in Sources */,
+				224593CA208CA507007A7C08 /* CircleImageView.swift in Sources */,
+				224593CB208CA507007A7C08 /* NetworkService.swift in Sources */,
+				224593CC208CA507007A7C08 /* MyFamilyViewController.swift in Sources */,
+				224593CD208CA507007A7C08 /* FamilyMember.swift in Sources */,
+				224593CE208CA507007A7C08 /* ShareImageViewController.swift in Sources */,
+				224593CF208CA507007A7C08 /* UIStoryboardSegue+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		888494CA208B872E00B980C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,17 +706,20 @@
 				88F1392E208C1B8400C819C2 /* KairosEnrollImage.swift in Sources */,
 				88F13942208C4C8600C819C2 /* Resuable.swift in Sources */,
 				88F13939208C43A200C819C2 /* UIImageView+Extension.swift in Sources */,
+				2208C810208C94D30025D22B /* ProcessInfo+Extension.swift in Sources */,
 				88F1394D208C4F5800C819C2 /* FamilyMemberCollectionViewCell.swift in Sources */,
 				88F1392C208C1A5C00C819C2 /* KairosAttributes.swift in Sources */,
 				88F13960208C760300C819C2 /* BaseAlertViewController.swift in Sources */,
 				88F13932208C1F1700C819C2 /* KairosEnrollResult.swift in Sources */,
 				88F1395B208C708800C819C2 /* ProgressViewController.swift in Sources */,
 				88F13965208C7DA300C819C2 /* CameraHandler.swift in Sources */,
+				224593E4208CA6C5007A7C08 /* ShelterResultsViewController.swift in Sources */,
 				2208C7BB208BE8180025D22B /* WaterNode.swift in Sources */,
 				88F13959208C631900C819C2 /* UIView+Extension.swift in Sources */,
 				88F1392A208C17CC00C819C2 /* KairosEnrollTransaction.swift in Sources */,
 				888494D6208B872E00B980C7 /* ARFloodViewController.swift in Sources */,
 				88F13946208C4D5F00C819C2 /* Array+Extension.swift in Sources */,
+				2208C848208C95C20025D22B /* ShelterViewController.swift in Sources */,
 				2208C7C2208C28D90025D22B /* Cloudinary.swift in Sources */,
 				2208C7BA208BDD300025D22B /* SandbagCalculatorViewController.swift in Sources */,
 				88F13951208C51B400C819C2 /* UIColor+Extension.swift in Sources */,
@@ -548,6 +749,14 @@
 			name = ShareImage.storyboard;
 			sourceTree = "<group>";
 		};
+		2208C844208C95B00025D22B /* Shelter.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2208C845208C95B00025D22B /* Base */,
+			);
+			name = Shelter.storyboard;
+			sourceTree = "<group>";
+		};
 		888494D7208B872E00B980C7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -575,6 +784,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		224593DC208CA507007A7C08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CCD0A1444FBF1F886611A8E /* Pods-Levels-Shelter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SB3F2S2K3;
+				INFOPLIST_FILE = "Shelter-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.Shelter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		224593DD208CA507007A7C08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 505CFA900187F86A5C32DA5F /* Pods-Levels-Shelter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SB3F2S2K3;
+				INFOPLIST_FILE = "Shelter-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.Shelter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		888494E0208B872F00B980C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -691,7 +938,7 @@
 		};
 		888494E3208B872F00B980C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAE28CA89506F9F4085524DE /* Pods-Levels.debug.xcconfig */;
+			baseConfigurationReference = 0F2D4BE875932E4C0210360A /* Pods-Levels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -710,7 +957,7 @@
 		};
 		888494E4208B872F00B980C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B60D6EDC12D214B12DDC25E /* Pods-Levels.release.xcconfig */;
+			baseConfigurationReference = 792801ABE163BC5B29A832FA /* Pods-Levels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -730,6 +977,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		224593DB208CA507007A7C08 /* Build configuration list for PBXNativeTarget "Shelter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224593DC208CA507007A7C08 /* Debug */,
+				224593DD208CA507007A7C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		888494C9208B872E00B980C7 /* Build configuration list for PBXProject "Levels" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
