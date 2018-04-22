@@ -25,6 +25,22 @@
 		88F13930208C1E9400C819C2 /* Kairos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1392F208C1E9400C819C2 /* Kairos.swift */; };
 		88F13932208C1F1700C819C2 /* KairosEnrollResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */; };
 		88F13934208C2F6600C819C2 /* KairosRecognizeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13933208C2F6600C819C2 /* KairosRecognizeResult.swift */; };
+		88F13937208C3CAC00C819C2 /* MyFamily.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F13935208C3CAC00C819C2 /* MyFamily.storyboard */; };
+		88F13939208C43A200C819C2 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13938208C43A200C819C2 /* UIImageView+Extension.swift */; };
+		88F1393C208C44E700C819C2 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1393B208C44E700C819C2 /* CircleImageView.swift */; };
+		88F1393F208C4BE400C819C2 /* MyFriendCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1393E208C4BE400C819C2 /* MyFriendCollectionViewLayout.swift */; };
+		88F13942208C4C8600C819C2 /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13941208C4C8600C819C2 /* Resuable.swift */; };
+		88F13944208C4D2200C819C2 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13943208C4D2200C819C2 /* UICollectionView+Extension.swift */; };
+		88F13946208C4D5F00C819C2 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13945208C4D5F00C819C2 /* Array+Extension.swift */; };
+		88F13949208C4E9200C819C2 /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13948208C4E9200C819C2 /* FamilyMember.swift */; };
+		88F1394B208C4F1400C819C2 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1394A208C4F1400C819C2 /* BaseCollectionView.swift */; };
+		88F1394D208C4F5800C819C2 /* FamilyMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1394C208C4F5800C819C2 /* FamilyMemberCollectionViewCell.swift */; };
+		88F1394F208C50D900C819C2 /* ImageAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1394E208C50D900C819C2 /* ImageAccess.swift */; };
+		88F13951208C51B400C819C2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13950208C51B400C819C2 /* UIColor+Extension.swift */; };
+		88F13953208C554900C819C2 /* MyFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13952208C554900C819C2 /* MyFamilyViewController.swift */; };
+		88F13955208C585300C819C2 /* familymembers.json in Resources */ = {isa = PBXBuildFile; fileRef = 88F13954208C585300C819C2 /* familymembers.json */; };
+		88F13957208C5B1900C819C2 /* FamilyTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13956208C5B1900C819C2 /* FamilyTracker.swift */; };
+		88F13959208C631900C819C2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13958208C631900C819C2 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +65,22 @@
 		88F1392F208C1E9400C819C2 /* Kairos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kairos.swift; sourceTree = "<group>"; };
 		88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosEnrollResult.swift; sourceTree = "<group>"; };
 		88F13933208C2F6600C819C2 /* KairosRecognizeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosRecognizeResult.swift; sourceTree = "<group>"; };
+		88F13936208C3CAC00C819C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyFamily.storyboard; sourceTree = "<group>"; };
+		88F13938208C43A200C819C2 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		88F1393B208C44E700C819C2 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		88F1393E208C4BE400C819C2 /* MyFriendCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendCollectionViewLayout.swift; sourceTree = "<group>"; };
+		88F13941208C4C8600C819C2 /* Resuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resuable.swift; sourceTree = "<group>"; };
+		88F13943208C4D2200C819C2 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		88F13945208C4D5F00C819C2 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		88F13948208C4E9200C819C2 /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
+		88F1394A208C4F1400C819C2 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		88F1394C208C4F5800C819C2 /* FamilyMemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberCollectionViewCell.swift; sourceTree = "<group>"; };
+		88F1394E208C50D900C819C2 /* ImageAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAccess.swift; sourceTree = "<group>"; };
+		88F13950208C51B400C819C2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		88F13952208C554900C819C2 /* MyFamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFamilyViewController.swift; sourceTree = "<group>"; };
+		88F13954208C585300C819C2 /* familymembers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = familymembers.json; sourceTree = "<group>"; };
+		88F13956208C5B1900C819C2 /* FamilyTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTracker.swift; sourceTree = "<group>"; };
+		88F13958208C631900C819C2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BAE28CA89506F9F4085524DE /* Pods-Levels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Levels/Pods-Levels.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,10 +138,12 @@
 				888494E7208B874F00B980C7 /* BusinessLayer */,
 				888494E6208B874800B980C7 /* ServiceLayer */,
 				888494F3208BC16400B980C7 /* Extensions */,
+				88F13940208C4C6800C819C2 /* Protocols */,
 				888494D1208B872E00B980C7 /* AppDelegate.swift */,
 				888494D3208B872E00B980C7 /* art.scnassets */,
 				888494DA208B872F00B980C7 /* Assets.xcassets */,
 				888494DF208B872F00B980C7 /* Info.plist */,
+				88F13954208C585300C819C2 /* familymembers.json */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -146,6 +180,7 @@
 			children = (
 				888494D7208B872E00B980C7 /* Main.storyboard */,
 				888494DC208B872F00B980C7 /* LaunchScreen.storyboard */,
+				88F13935208C3CAC00C819C2 /* MyFamily.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -153,6 +188,9 @@
 		888494EA208B878200B980C7 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				88F13947208C4D7F00C819C2 /* UICollectionViewCells */,
+				88F1393D208C4BB400C819C2 /* UICollectionViewVerticalFlowLayout */,
+				88F1393A208C44BB00C819C2 /* UIImageViews */,
 				888494F0208BB15D00B980C7 /* SCNNodes */,
 			);
 			path = Subviews;
@@ -163,6 +201,7 @@
 			children = (
 				888494D5208B872E00B980C7 /* ARFloodViewController.swift */,
 				2208C7B9208BDD300025D22B /* SandbagCalculatorViewController.swift */,
+				88F13952208C554900C819C2 /* MyFamilyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -175,6 +214,7 @@
 				88F1392D208C1B8400C819C2 /* KairosEnrollImage.swift */,
 				88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */,
 				88F13933208C2F6600C819C2 /* KairosRecognizeResult.swift */,
+				88F13948208C4E9200C819C2 /* FamilyMember.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -183,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				88F1392F208C1E9400C819C2 /* Kairos.swift */,
+				88F13956208C5B1900C819C2 /* FamilyTracker.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -208,8 +249,47 @@
 			children = (
 				2208C7B5208BDC130025D22B /* UIStoryboard+Extension.swift */,
 				2208C7B7208BDC900025D22B /* UIViewController+Extension.swift */,
+				88F13938208C43A200C819C2 /* UIImageView+Extension.swift */,
+				88F13943208C4D2200C819C2 /* UICollectionView+Extension.swift */,
+				88F13945208C4D5F00C819C2 /* Array+Extension.swift */,
+				88F13950208C51B400C819C2 /* UIColor+Extension.swift */,
+				88F13958208C631900C819C2 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88F1393A208C44BB00C819C2 /* UIImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				88F1393B208C44E700C819C2 /* CircleImageView.swift */,
+			);
+			path = UIImageViews;
+			sourceTree = "<group>";
+		};
+		88F1393D208C4BB400C819C2 /* UICollectionViewVerticalFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				88F1393E208C4BE400C819C2 /* MyFriendCollectionViewLayout.swift */,
+			);
+			path = UICollectionViewVerticalFlowLayout;
+			sourceTree = "<group>";
+		};
+		88F13940208C4C6800C819C2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				88F13941208C4C8600C819C2 /* Resuable.swift */,
+				88F1394E208C50D900C819C2 /* ImageAccess.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		88F13947208C4D7F00C819C2 /* UICollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				88F1394A208C4F1400C819C2 /* BaseCollectionView.swift */,
+				88F1394C208C4F5800C819C2 /* FamilyMemberCollectionViewCell.swift */,
+			);
+			path = UICollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,8 +353,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F13937208C3CAC00C819C2 /* MyFamily.storyboard in Resources */,
 				888494D4208B872E00B980C7 /* art.scnassets in Resources */,
 				888494DE208B872F00B980C7 /* LaunchScreen.storyboard in Resources */,
+				88F13955208C585300C819C2 /* familymembers.json in Resources */,
 				888494DB208B872F00B980C7 /* Assets.xcassets in Resources */,
 				888494D9208B872E00B980C7 /* Main.storyboard in Resources */,
 			);
@@ -311,6 +393,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlertTransition/AlertTransition.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Presentr/Presentr.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/VerticalSteppedSlider/VerticalSteppedSlider.framework",
 			);
@@ -319,6 +403,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlertTransition.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Presentr.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VerticalSteppedSlider.framework",
 			);
@@ -349,19 +435,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F13944208C4D2200C819C2 /* UICollectionView+Extension.swift in Sources */,
+				88F1394F208C50D900C819C2 /* ImageAccess.swift in Sources */,
+				88F1393F208C4BE400C819C2 /* MyFriendCollectionViewLayout.swift in Sources */,
 				88F13930208C1E9400C819C2 /* Kairos.swift in Sources */,
+				88F13957208C5B1900C819C2 /* FamilyTracker.swift in Sources */,
 				88F1392E208C1B8400C819C2 /* KairosEnrollImage.swift in Sources */,
+				88F13942208C4C8600C819C2 /* Resuable.swift in Sources */,
+				88F13939208C43A200C819C2 /* UIImageView+Extension.swift in Sources */,
+				88F1394D208C4F5800C819C2 /* FamilyMemberCollectionViewCell.swift in Sources */,
 				88F1392C208C1A5C00C819C2 /* KairosAttributes.swift in Sources */,
 				88F13932208C1F1700C819C2 /* KairosEnrollResult.swift in Sources */,
 				2208C7BB208BE8180025D22B /* WaterNode.swift in Sources */,
+				88F13959208C631900C819C2 /* UIView+Extension.swift in Sources */,
 				88F1392A208C17CC00C819C2 /* KairosEnrollTransaction.swift in Sources */,
 				888494D6208B872E00B980C7 /* ARFloodViewController.swift in Sources */,
+				88F13946208C4D5F00C819C2 /* Array+Extension.swift in Sources */,
 				2208C7BA208BDD300025D22B /* SandbagCalculatorViewController.swift in Sources */,
+				88F13951208C51B400C819C2 /* UIColor+Extension.swift in Sources */,
 				88F13934208C2F6600C819C2 /* KairosRecognizeResult.swift in Sources */,
+				88F1394B208C4F1400C819C2 /* BaseCollectionView.swift in Sources */,
 				2208C7B6208BDC130025D22B /* UIStoryboard+Extension.swift in Sources */,
 				2208C7B8208BDC900025D22B /* UIViewController+Extension.swift in Sources */,
 				888494D2208B872E00B980C7 /* AppDelegate.swift in Sources */,
+				88F1393C208C44E700C819C2 /* CircleImageView.swift in Sources */,
 				88F13928208C0A7600C819C2 /* NetworkService.swift in Sources */,
+				88F13953208C554900C819C2 /* MyFamilyViewController.swift in Sources */,
+				88F13949208C4E9200C819C2 /* FamilyMember.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +482,14 @@
 				888494DD208B872F00B980C7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		88F13935208C3CAC00C819C2 /* MyFamily.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88F13936208C3CAC00C819C2 /* Base */,
+			);
+			name = MyFamily.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -509,10 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SB3F2S2K3;
 				INFOPLIST_FILE = Levels/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.Levels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -528,10 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SB3F2S2K3;
 				INFOPLIST_FILE = Levels/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.Levels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

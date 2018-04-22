@@ -9,6 +9,11 @@
 import Foundation
 import PromiseKit
 
+// MARK: - Private Constants For Kairos Keys
+private let appId = "d34682d5"
+private let key = "8cd09afbc87b6d59faa5c272a86f793b"
+
+
 // MARK: - Kairos Errors
 enum KairosError: Error {
     case badImage
@@ -17,11 +22,6 @@ enum KairosError: Error {
 
 // MARK: - Kairos Integration
 final class Kairos {
-    
-    // MARK: - Private Instance Attributes For Karios Keys
-    private let appId = "d34682d5"
-    private let key = "8cd09afbc87b6d59faa5c272a86f793b"
-    
     
     // MARK: - Private Instance Attributes For Kairos API Endpoints
     private enum Endpoints {
@@ -40,8 +40,13 @@ final class Kairos {
     }
     
     
-    // MARK: - Public Instance Methods
-    func enrollPerson(named: String, with image: UIImage) -> Promise<Bool> {
+    // MARK: - Initializers
+    @available(*, unavailable)
+    init() {}
+    
+    
+    // MARK: - Public Class Methods
+    static func enrollPerson(named: String, with image: UIImage) -> Promise<Bool> {
         return Promise { seal in
             guard let imageData = UIImageJPEGRepresentation(image, 0.7) else {
                 seal.reject(KairosError.badImage)
@@ -82,7 +87,7 @@ final class Kairos {
         }
     }
     
-    func recognizePerson(with image: UIImage) -> Promise<Bool> {
+    static func recognizePerson(with image: UIImage) -> Promise<Bool> {
         return Promise { seal in
             guard let imageData = UIImageJPEGRepresentation(image, 0.7) else {
                 seal.reject(KairosError.badImage)
