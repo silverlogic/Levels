@@ -54,12 +54,12 @@ extension ARFloodViewController {
         guard let controller = segue.destination as? SandbagCalculatorViewController else { return }
         controller.surgeHeight = Double(surgeLevelSlider.value)
         controller.at.transition = TrolleyTransition()
-        controller.shareImageClosure = { [weak self] (sandbags) in
+        controller.shareImageClosure = { [weak self] (info) in
             guard let strongSelf = self else { return }
             guard let view = UIApplication.shared.keyWindow else { return }
             let screenshot = view.asImage(0.0, afterScreenUpdates: false)
             guard let data = UIImageJPEGRepresentation(screenshot, 1.0) else { return }
-            strongSelf.cloudinary.createUploader(data, sandbags: sandbags, completion: { (url, error) in
+            strongSelf.cloudinary.createUploader(data, sandbagInfo: info, completion: { (url, error) in
                 guard let uploadUrl = url else { return }
                 strongSelf.cloudinary.createDownloader(uploadUrl, completion: { (image, error) in
                     guard let downloadedImage = image else { return }

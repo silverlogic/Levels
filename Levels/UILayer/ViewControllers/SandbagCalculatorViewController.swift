@@ -21,12 +21,12 @@ final class SandbagCalculatorViewController: UIViewController {
 
 
     // MARK: - Private Instance Attributes
-    var sandbagTotalCount: Int = 0
+    private var sandbagTotalCount = 0
 
 
     // MARK: - Public Instance Attributes
     var surgeHeight: Double = 0
-    var shareImageClosure: ((_ sandbags: Int) -> Void)?
+    var shareImageClosure: ((_ info: SandbagInfo) -> Void)?
 
 
     // MARK; - Lifecycle
@@ -59,7 +59,8 @@ extension SandbagCalculatorViewController {
         guard let closure = shareImageClosure else { return }
         dismiss(animated: true) { [weak self] in
             guard let strongSelf = self else { return }
-            closure(strongSelf.sandbagTotalCount)
+            let info = SandbagInfo(doors: Int(strongSelf.doorsSlider.value), slidingDoors: Int(strongSelf.slidingDoorsSlider.value), windows: Int(strongSelf.windowsSlider.value), garageDoors: Int(strongSelf.garageDoorSlider.value), total: strongSelf.sandbagTotalCount)
+            closure(info)
         }
     }
 }

@@ -15,6 +15,7 @@
 		2208C7C7208C453D0025D22B /* ShareImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2208C7C5208C453D0025D22B /* ShareImage.storyboard */; };
 		2208C7C9208C45FC0025D22B /* ShareImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C7C8208C45FC0025D22B /* ShareImageViewController.swift */; };
 		2208C7CB208C49EB0025D22B /* UIStoryboardSegue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C7CA208C49EB0025D22B /* UIStoryboardSegue+Extension.swift */; };
+		2208C80E208C8BAF0025D22B /* SandbagAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208C80D208C8BAF0025D22B /* SandbagAttributes.swift */; };
 		85C6F07B6FB08153603A65BD /* Pods_Levels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C528AD5D296FC7890F3B61 /* Pods_Levels.framework */; };
 		888494D2208B872E00B980C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888494D1208B872E00B980C7 /* AppDelegate.swift */; };
 		888494D4208B872E00B980C7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 888494D3208B872E00B980C7 /* art.scnassets */; };
@@ -56,6 +57,7 @@
 		2208C7C6208C453D0025D22B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShareImage.storyboard; sourceTree = "<group>"; };
 		2208C7C8208C45FC0025D22B /* ShareImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareImageViewController.swift; sourceTree = "<group>"; };
 		2208C7CA208C49EB0025D22B /* UIStoryboardSegue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+Extension.swift"; sourceTree = "<group>"; };
+		2208C80D208C8BAF0025D22B /* SandbagAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandbagAttributes.swift; sourceTree = "<group>"; };
 		7B60D6EDC12D214B12DDC25E /* Pods-Levels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels.release.xcconfig"; path = "Pods/Target Support Files/Pods-Levels/Pods-Levels.release.xcconfig"; sourceTree = "<group>"; };
 		80C528AD5D296FC7890F3B61 /* Pods_Levels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Levels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888494CE208B872E00B980C7 /* Levels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Levels.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +237,7 @@
 				88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */,
 				88F13933208C2F6600C819C2 /* KairosRecognizeResult.swift */,
 				88F13948208C4E9200C819C2 /* FamilyMember.swift */,
+				2208C80D208C8BAF0025D22B /* SandbagAttributes.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				88F1394F208C50D900C819C2 /* ImageAccess.swift in Sources */,
 				88F1393F208C4BE400C819C2 /* MyFriendCollectionViewLayout.swift in Sources */,
 				88F13930208C1E9400C819C2 /* Kairos.swift in Sources */,
+				2208C80E208C8BAF0025D22B /* SandbagAttributes.swift in Sources */,
 				88F13957208C5B1900C819C2 /* FamilyTracker.swift in Sources */,
 				88F1392E208C1B8400C819C2 /* KairosEnrollImage.swift in Sources */,
 				88F13942208C4C8600C819C2 /* Resuable.swift in Sources */,
