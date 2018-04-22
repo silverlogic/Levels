@@ -64,7 +64,6 @@ private extension WaterNode {
         waterScene.backgroundColor = .clear
         waterScene.addChild(waterSpriteNode)
         let material = SCNMaterial()
-        material.transparency = 0.85
         material.diffuse.contents = waterScene
         boxGeometry.materials = [material]
         let planeNode = SCNNode(geometry: self.boxGeometry)
@@ -75,7 +74,7 @@ private extension WaterNode {
     func updateBoxHeight() {
         //SCNTransaction.animationDuration = 1.0
         let height = 0.0435 * floodLevel
-        boxGeometry.materials.first?.transparency = height == 0.0 ? 0.0 : 1.0
+        boxGeometry.materials.first?.transparency = height == 0.0 ? 0.0 : 0.75
         boxGeometry.height = 0.0435 * floodLevel
     }
 }
