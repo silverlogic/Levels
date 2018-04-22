@@ -94,6 +94,11 @@ extension ARFloodViewController: ARSCNViewDelegate {
             let plane = WaterNode(anchor: planeAnchor)
             groundPlaneNodes.append(plane)
             node.addChildNode(plane)
+            print(planeAnchor.extent.x + planeAnchor.extent.z)
+            if planeAnchor.extent.x + planeAnchor.extent.z < 1.5 { return }
+            DispatchQueue.main.async { [weak self] in
+                self?.surgeLevelSlider.thumbImage = UIImage(named: "icon-slider40-rotate")
+            }
         }
     }
     
@@ -104,6 +109,11 @@ extension ARFloodViewController: ARSCNViewDelegate {
                 return node.anchor.identifier == planeAnchor.identifier
             }) else { return }
             groundPlaneNode.update(anchor: planeAnchor)
+            print(planeAnchor.extent.x + planeAnchor.extent.z)
+            if planeAnchor.extent.x + planeAnchor.extent.z < 1.5 { return }
+            DispatchQueue.main.async { [weak self] in
+                self?.surgeLevelSlider.thumbImage = UIImage(named: "icon-slider40-rotate")
+            }
         }
     }
 }
@@ -112,7 +122,10 @@ extension ARFloodViewController: ARSCNViewDelegate {
 // MARK: - IBActions
 private extension ARFloodViewController {
     @IBAction func floodLevelSliderChanged(_ sender: VSSlider) {
-        surgeLevelLabel.text = "\(Int(surgeLevelSlider.value)) ft"
+        DispatchQueue.main.async { [weak self] in
+            guard let level = self?.surgeLevelSlider.value else { return }
+            self?.surgeLevelLabel.text = "\(Int(level)) ft"
+        }
         groundPlaneNodes.forEach {
             $0.floodLevel = CGFloat(surgeLevelSlider.value)
         }
@@ -123,6 +136,7 @@ private extension ARFloodViewController {
 // MARK: - Private Instance Methods
 private extension ARFloodViewController {
     func setupScene() {
+        surgeLevelSlider.thumbImage = UIImage(named: "icon-slider-inactive")
         sceneView.delegate = self
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         self.sceneView.autoenablesDefaultLighting = true
