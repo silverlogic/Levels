@@ -24,6 +24,7 @@
 		88F1392E208C1B8400C819C2 /* KairosEnrollImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1392D208C1B8400C819C2 /* KairosEnrollImage.swift */; };
 		88F13930208C1E9400C819C2 /* Kairos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1392F208C1E9400C819C2 /* Kairos.swift */; };
 		88F13932208C1F1700C819C2 /* KairosEnrollResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */; };
+		88F13934208C2F6600C819C2 /* KairosRecognizeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13933208C2F6600C819C2 /* KairosRecognizeResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		88F1392D208C1B8400C819C2 /* KairosEnrollImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosEnrollImage.swift; sourceTree = "<group>"; };
 		88F1392F208C1E9400C819C2 /* Kairos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kairos.swift; sourceTree = "<group>"; };
 		88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosEnrollResult.swift; sourceTree = "<group>"; };
+		88F13933208C2F6600C819C2 /* KairosRecognizeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosRecognizeResult.swift; sourceTree = "<group>"; };
 		BAE28CA89506F9F4085524DE /* Pods-Levels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Levels/Pods-Levels.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +174,7 @@
 				88F1392B208C1A5C00C819C2 /* KairosAttributes.swift */,
 				88F1392D208C1B8400C819C2 /* KairosEnrollImage.swift */,
 				88F13931208C1F1700C819C2 /* KairosEnrollResult.swift */,
+				88F13933208C2F6600C819C2 /* KairosRecognizeResult.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				88F1392A208C17CC00C819C2 /* KairosEnrollTransaction.swift in Sources */,
 				888494D6208B872E00B980C7 /* ARFloodViewController.swift in Sources */,
 				2208C7BA208BDD300025D22B /* SandbagCalculatorViewController.swift in Sources */,
+				88F13934208C2F6600C819C2 /* KairosRecognizeResult.swift in Sources */,
 				2208C7B6208BDC130025D22B /* UIStoryboard+Extension.swift in Sources */,
 				2208C7B8208BDC900025D22B /* UIViewController+Extension.swift in Sources */,
 				888494D2208B872E00B980C7 /* AppDelegate.swift in Sources */,
