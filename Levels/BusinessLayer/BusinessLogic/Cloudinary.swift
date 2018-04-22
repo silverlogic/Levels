@@ -8,6 +8,15 @@
 
 import Foundation
 import Cloudinary
+import PromiseKit
+
+// MARK: - Cloudinary Errors
+enum CloudinaryError: Error {
+    case badImage
+    case unknown
+    case apiError
+    case publicIdNotAvailable
+}
 
 public typealias CLDURLCompletionHandler = (_ url: String?, _ error: NSError?) -> ()
 
@@ -71,5 +80,38 @@ final class Cloudinary {
             completion(nil, error)
         }
     }
+    
+    func submit(image: UIImage) -> Promise<String> {
+        return Promise { seal in
+            guard let imageData = UIImageJPEGRepresentation(image, 0.7) else {
+                seal.reject(CloudinaryError.badImage)
+                return
+            }
+            cloudinary.createUploader()
+                .upload(data: imageData, uploadPreset: uploadPreset) { [weak self] (result, error) in
+                    guard let strongSelf = self else {
+                        seal.reject(CloudinaryError.unknown)
+                        return
+                    }
+                    guard error == nil else {
+                        seal.reject(CloudinaryError.apiError)
+                        return
+                    }
+                    guard let apiResult = result else {
+                        seal.reject(CloudinaryError.apiError)
+                        return
+                    }
+                    guard let publicId = apiResult.publicId else {
+                        seal.reject(CloudinaryError.publicIdNotAvailable)
+                        return
+                    }
+                    let url = strongSelf.cloudinary.createUrl()
+                    guard let stringUrl = url.generate(publicId) else {
+                        seal.reject(CloudinaryError.unknown)
+                        return
+                    }
+                    seal.fulfill(stringUrl)
+            }
+        }
+    }
 }
-

@@ -122,12 +122,11 @@ private extension MyFamilyViewController {
                 self?.familyTracker.addNewFamilyMember(named: name, with: image)
                 .done { (added) in
                     self?.collectionView.reloadData()
+                    progressView.dismiss(animated: true, completion: nil)
                 }
                 .catch { (error) in
-                    print("Error adding family member: \(error)")
-                }
-                .finally {
                     progressView.dismiss(animated: true, completion: nil)
+                    print("Error adding family member: \(error)")
                 }
             }
         }

@@ -46,16 +46,12 @@ final class Kairos {
     
     
     // MARK: - Public Class Methods
-    static func enrollPerson(named: String, with image: UIImage) -> Promise<Bool> {
+    static func enrollPerson(named: String, with url: String) -> Promise<Bool> {
         return Promise { seal in
-            guard let imageData = UIImageJPEGRepresentation(image, 0.7) else {
-                seal.reject(KairosError.badImage)
-                return
-            }
-            let baseString = imageData.base64EncodedString(options: .lineLength64Characters)
+            
             let endpoint = Endpoints.enroll.endpoint()
             let parameters: [String: Any] = [
-                "image": "https://res.cloudinary.com/silverlogic/image/upload/v1524353938/rob_test1.jpg",
+                "image": url,
                 "gallery_name": "missing-persons",
                 "subject_id": named
             ]
@@ -63,9 +59,9 @@ final class Kairos {
                 "app_id": appId,
                 "app_key": key
             ]
-            let url = URL(string: endpoint)!
+            let endpointUrl = URL(string: endpoint)!
             let requestInfo = RequestInfo(
-                url: url,
+                url: endpointUrl,
                 method: .post,
                 Parameters: parameters,
                 headers: headers,
@@ -87,25 +83,20 @@ final class Kairos {
         }
     }
     
-    static func recognizePerson(with image: UIImage) -> Promise<Bool> {
+    static func recognizePerson(with url: String) -> Promise<Bool> {
         return Promise { seal in
-            guard let imageData = UIImageJPEGRepresentation(image, 0.7) else {
-                seal.reject(KairosError.badImage)
-                return
-            }
-            let baseString = imageData.base64EncodedString(options: .lineLength64Characters)
-            let endpoint = Endpoints.enroll.endpoint()
+            let endpoint = Endpoints.recognize.endpoint()
             let parameters: [String: Any] = [
-                "image": baseString,
+                "image": url,
                 "gallery_name": "missing-persons"
             ]
             let headers: [String: String] = [
                 "app_id": appId,
                 "app_key": key
             ]
-            let url = URL(string: endpoint)!
+            let endpointUrl = URL(string: endpoint)!
             let requestInfo = RequestInfo(
-                url: url,
+                url: endpointUrl,
                 method: .post,
                 Parameters: parameters,
                 headers: headers,

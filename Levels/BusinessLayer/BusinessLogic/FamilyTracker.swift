@@ -18,6 +18,7 @@ final class FamilyTracker {
     
     // MARK: - Private Instance Attributes
     private var familyMembers: [FamilyMember] = []
+    private let cloudinary = Cloudinary()
     
     
     // MARK: - Public Instance Attributes
@@ -27,7 +28,10 @@ final class FamilyTracker {
     // MARK: - Public Instance Methods
     func addNewFamilyMember(named: String, with image: UIImage) -> Promise<Bool> {
         return Promise { seal in
-            Kairos.enrollPerson(named: named, with: image)
+            cloudinary.submit(image: image)
+            .then { url in
+                return Kairos.enrollPerson(named: named, with: url)
+            }
             .done { [weak self] (enrolled) in
                 let familyMember = FamilyMember(name: named, imageUrl: nil, isMissing: true, image: image)
                 self?.familyMembers.append(familyMember)
@@ -40,7 +44,18 @@ final class FamilyTracker {
     }
     
     func recognizeFamilyMember(from image: UIImage) -> Promise<Bool> {
-        return Kairos.recognizePerson(with: image)
+        return Promise { seal in
+            cloudinary.submit(image: image)
+            .then { url in
+                return Kairos.recognizePerson(with: url)
+            }
+            .done { (recognized) in
+                seal.fulfill(recognized)
+            }
+                .catch { (error) in
+                    seal.reject(error)
+            }
+        }
     }
     
     func loadSavedFamilyMembers() -> Promise<Void> {

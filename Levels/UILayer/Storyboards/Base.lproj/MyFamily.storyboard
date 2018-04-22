@@ -37,21 +37,20 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="259" height="259"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PH6-jq-ZJi" customClass="CircleImageView" customModule="Levels" customModuleProvider="target">
-                                                            <rect key="frame" x="50" y="22" width="159" height="159"/>
+                                                            <rect key="frame" x="58" y="0.0" width="143" height="143"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="159" id="2vO-xt-TTE"/>
-                                                                <constraint firstAttribute="height" constant="159" id="JYz-0o-fae"/>
+                                                                <constraint firstAttribute="width" constant="143" id="2vO-xt-TTE"/>
+                                                                <constraint firstAttribute="height" constant="143" id="JYz-0o-fae"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Robert Dee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIH-ZO-HFc">
-                                                            <rect key="frame" x="8" y="211" width="243" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Robert Dee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIH-ZO-HFc">
+                                                            <rect key="frame" x="8" y="151" width="243" height="100"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="-" translatesAutoresizingMaskIntoConstraints="NO" id="klL-M3-QLf">
-                                                            <rect key="frame" x="113" y="85" width="32" height="32"/>
+                                                            <rect key="frame" x="113" y="52" width="32" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="32" id="GE4-Kr-2dh"/>
                                                                 <constraint firstAttribute="width" constant="32" id="mpf-KI-beA"/>
@@ -60,10 +59,14 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="klL-M3-QLf" firstAttribute="top" secondItem="cVC-dl-g6P" secondAttribute="top" constant="85" id="9C0-IY-PDS"/>
-                                                        <constraint firstItem="PH6-jq-ZJi" firstAttribute="top" secondItem="cVC-dl-g6P" secondAttribute="top" constant="22" id="Fot-2T-tU8"/>
+                                                        <constraint firstItem="klL-M3-QLf" firstAttribute="top" secondItem="cVC-dl-g6P" secondAttribute="top" constant="52" id="9C0-IY-PDS"/>
+                                                        <constraint firstItem="yIH-ZO-HFc" firstAttribute="top" secondItem="PH6-jq-ZJi" secondAttribute="bottom" constant="8" id="DYW-zx-RTR"/>
+                                                        <constraint firstItem="PH6-jq-ZJi" firstAttribute="top" secondItem="cVC-dl-g6P" secondAttribute="top" id="Fot-2T-tU8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yIH-ZO-HFc" secondAttribute="trailing" constant="8" id="Iwu-Yx-WrL"/>
                                                         <constraint firstItem="klL-M3-QLf" firstAttribute="centerX" secondItem="cVC-dl-g6P" secondAttribute="centerX" id="Mlx-lF-WQ6"/>
                                                         <constraint firstItem="PH6-jq-ZJi" firstAttribute="centerX" secondItem="cVC-dl-g6P" secondAttribute="centerX" id="aqc-mb-jNj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="yIH-ZO-HFc" secondAttribute="bottom" constant="8" id="vUe-9Q-eRm"/>
+                                                        <constraint firstItem="yIH-ZO-HFc" firstAttribute="leading" secondItem="cVC-dl-g6P" secondAttribute="leading" constant="8" id="w5a-CI-MSh"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -98,7 +101,8 @@
                         <viewLayoutGuide key="safeArea" id="fMs-xk-xZO"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Family" id="MR8-Jk-JFB">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="6jq-jw-Ltp">
+                        <barButtonItem key="leftBarButtonItem" image="Dismiss_Icon_White_40x40" id="6jq-jw-Ltp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="dismiss" destination="nUS-cL-XaE" id="hzR-bn-4um"/>
                             </connections>
@@ -144,6 +148,7 @@
     </scenes>
     <resources>
         <image name="-" width="40" height="40"/>
+        <image name="Dismiss_Icon_White_40x40" width="40" height="40"/>
         <image name="My_Family_White_Bottom" width="1125" height="2436"/>
     </resources>
 </document>

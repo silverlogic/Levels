@@ -17,11 +17,11 @@ final class ProgressViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
-        rotationAnimation.fromValue = 0.0
-        rotationAnimation.toValue = Double.pi * 2 //Minus can be Direction
-        rotationAnimation.duration = 3.0
-        rotationAnimation.repeatCount = .infinity
-        progressImageView.layer.add(rotationAnimation, forKey: nil)
+        progressImageView.startRotating()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        progressImageView.stopRotating()
     }
 }
