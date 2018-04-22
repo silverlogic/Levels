@@ -46,6 +46,11 @@
 		88F13955208C585300C819C2 /* familymembers.json in Resources */ = {isa = PBXBuildFile; fileRef = 88F13954208C585300C819C2 /* familymembers.json */; };
 		88F13957208C5B1900C819C2 /* FamilyTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13956208C5B1900C819C2 /* FamilyTracker.swift */; };
 		88F13959208C631900C819C2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13958208C631900C819C2 /* UIView+Extension.swift */; };
+		88F1395B208C708800C819C2 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1395A208C708800C819C2 /* ProgressViewController.swift */; };
+		88F1395D208C70B300C819C2 /* Progress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F1395C208C70B300C819C2 /* Progress.storyboard */; };
+		88F13960208C760300C819C2 /* BaseAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1395F208C760300C819C2 /* BaseAlertViewController.swift */; };
+		88F13962208C775600C819C2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13961208C775600C819C2 /* UIFont+Extension.swift */; };
+		88F13965208C7DA300C819C2 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F13964208C7DA300C819C2 /* CameraHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +97,11 @@
 		88F13954208C585300C819C2 /* familymembers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = familymembers.json; sourceTree = "<group>"; };
 		88F13956208C5B1900C819C2 /* FamilyTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTracker.swift; sourceTree = "<group>"; };
 		88F13958208C631900C819C2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		88F1395A208C708800C819C2 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		88F1395C208C70B300C819C2 /* Progress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Progress.storyboard; sourceTree = "<group>"; };
+		88F1395F208C760300C819C2 /* BaseAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAlertViewController.swift; sourceTree = "<group>"; };
+		88F13961208C775600C819C2 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		88F13964208C7DA300C819C2 /* CameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
 		BAE28CA89506F9F4085524DE /* Pods-Levels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Levels/Pods-Levels.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,6 +212,7 @@
 				888494DC208B872F00B980C7 /* LaunchScreen.storyboard */,
 				88F13935208C3CAC00C819C2 /* MyFamily.storyboard */,
 				2208C7C5208C453D0025D22B /* ShareImage.storyboard */,
+				88F1395C208C70B300C819C2 /* Progress.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -209,6 +220,8 @@
 		888494EA208B878200B980C7 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				88F13963208C7D8B00C819C2 /* CameraHandler */,
+				88F1395E208C75EB00C819C2 /* UIAlertViewControllers */,
 				88F13947208C4D7F00C819C2 /* UICollectionViewCells */,
 				88F1393D208C4BB400C819C2 /* UICollectionViewVerticalFlowLayout */,
 				88F1393A208C44BB00C819C2 /* UIImageViews */,
@@ -224,6 +237,7 @@
 				2208C7B9208BDD300025D22B /* SandbagCalculatorViewController.swift */,
 				88F13952208C554900C819C2 /* MyFamilyViewController.swift */,
 				2208C7C8208C45FC0025D22B /* ShareImageViewController.swift */,
+				88F1395A208C708800C819C2 /* ProgressViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -279,6 +293,7 @@
 				88F13950208C51B400C819C2 /* UIColor+Extension.swift */,
 				88F13958208C631900C819C2 /* UIView+Extension.swift */,
 				2208C7CA208C49EB0025D22B /* UIStoryboardSegue+Extension.swift */,
+				88F13961208C775600C819C2 /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,6 +332,22 @@
 			path = UICollectionViewCells;
 			sourceTree = "<group>";
 		};
+		88F1395E208C75EB00C819C2 /* UIAlertViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88F1395F208C760300C819C2 /* BaseAlertViewController.swift */,
+			);
+			path = UIAlertViewControllers;
+			sourceTree = "<group>";
+		};
+		88F13963208C7D8B00C819C2 /* CameraHandler */ = {
+			isa = PBXGroup;
+			children = (
+				88F13964208C7DA300C819C2 /* CameraHandler.swift */,
+			);
+			path = CameraHandler;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,6 +360,7 @@
 				888494CB208B872E00B980C7 /* Frameworks */,
 				888494CC208B872E00B980C7 /* Resources */,
 				80C7DBB85574351186D7507D /* [CP] Embed Pods Frameworks */,
+				E174F09C0FB815418C576FDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -384,6 +416,7 @@
 				2208C7C7208C453D0025D22B /* ShareImage.storyboard in Resources */,
 				888494DB208B872F00B980C7 /* Assets.xcassets in Resources */,
 				888494D9208B872E00B980C7 /* Main.storyboard in Resources */,
+				88F1395D208C70B300C819C2 /* Progress.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +455,8 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Presentr/Presentr.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextField+Shake/UITextField_Shake.framework",
 				"${BUILT_PRODUCTS_DIR}/VerticalSteppedSlider/VerticalSteppedSlider.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -433,11 +468,28 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Presentr.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextField_Shake.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VerticalSteppedSlider.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Levels/Pods-Levels-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E174F09C0FB815418C576FDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Levels/Pods-Levels-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -458,7 +510,10 @@
 				88F13939208C43A200C819C2 /* UIImageView+Extension.swift in Sources */,
 				88F1394D208C4F5800C819C2 /* FamilyMemberCollectionViewCell.swift in Sources */,
 				88F1392C208C1A5C00C819C2 /* KairosAttributes.swift in Sources */,
+				88F13960208C760300C819C2 /* BaseAlertViewController.swift in Sources */,
 				88F13932208C1F1700C819C2 /* KairosEnrollResult.swift in Sources */,
+				88F1395B208C708800C819C2 /* ProgressViewController.swift in Sources */,
+				88F13965208C7DA300C819C2 /* CameraHandler.swift in Sources */,
 				2208C7BB208BE8180025D22B /* WaterNode.swift in Sources */,
 				88F13959208C631900C819C2 /* UIView+Extension.swift in Sources */,
 				88F1392A208C17CC00C819C2 /* KairosEnrollTransaction.swift in Sources */,
@@ -467,6 +522,7 @@
 				2208C7C2208C28D90025D22B /* Cloudinary.swift in Sources */,
 				2208C7BA208BDD300025D22B /* SandbagCalculatorViewController.swift in Sources */,
 				88F13951208C51B400C819C2 /* UIColor+Extension.swift in Sources */,
+				88F13962208C775600C819C2 /* UIFont+Extension.swift in Sources */,
 				88F13934208C2F6600C819C2 /* KairosRecognizeResult.swift in Sources */,
 				88F1394B208C4F1400C819C2 /* BaseCollectionView.swift in Sources */,
 				2208C7B6208BDC130025D22B /* UIStoryboard+Extension.swift in Sources */,

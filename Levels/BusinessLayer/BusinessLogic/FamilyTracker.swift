@@ -26,7 +26,17 @@ final class FamilyTracker {
     
     // MARK: - Public Instance Methods
     func addNewFamilyMember(named: String, with image: UIImage) -> Promise<Bool> {
-        return Kairos.enrollPerson(named: named, with: image)
+        return Promise { seal in
+            Kairos.enrollPerson(named: named, with: image)
+            .done { [weak self] (enrolled) in
+                let familyMember = FamilyMember(name: named, imageUrl: nil, isMissing: true, image: image)
+                self?.familyMembers.append(familyMember)
+                seal.fulfill(enrolled)
+            }
+            .catch { (error) in
+               seal.reject(error)
+            }
+        }
     }
     
     func recognizeFamilyMember(from image: UIImage) -> Promise<Bool> {

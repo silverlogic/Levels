@@ -6,6 +6,7 @@
 //  Copyright © 2018 The SilverLogic. All rights reserved.
 //
 
+import Presentr
 import UIKit
 
 final class MyFamilyViewController: UIViewController {
@@ -28,7 +29,13 @@ final class MyFamilyViewController: UIViewController {
 
 // MARK: - IBActions
 private extension MyFamilyViewController {
+    @IBAction func addFamilyMemberTapped(sender: UIBarButtonItem) {
+        showEnterName()
+    }
     
+    @IBAction func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 
@@ -82,6 +89,47 @@ private extension MyFamilyViewController {
         }
         .catch { (error) in
             print("Error loading family members: \(error)")
+        }
+    }
+    
+    func showEnterName() {
+        let title = "Name"
+        let subtitle = "Please enter the first name of your loved one"
+        let attributes = [AlertTextFieldAttributes(
+            placeholder: "First Name",
+            isSecureTextEntry: false,
+            keyboardType: .default,
+            autocorrectionType: .no,
+            autocapitalizationType: .none,
+            spellCheckingType: .no,
+            returnKeyType: .done
+        )]
+        showEditAlert(
+            title: title,
+            subtitle: subtitle,
+            textFieldAttributes: attributes) { [weak self] (values) in
+                let name = values["First Name"]!
+                self?.showCamera(name: name)
+        }
+    }
+    
+    func showCamera(name: String) {
+        CameraHandler.shared.showActionSheet(vc: self)
+        CameraHandler.shared.imagePickedBlock = { [weak self] (image) in
+            let progressView = UIStoryboard.loadProgressViewController()
+            let presentr = Presentr(presentationType: .fullScreen)
+            self?.customPresentViewController(presentr, viewController: progressView, animated: true) {
+                self?.familyTracker.addNewFamilyMember(named: name, with: image)
+                .done { (added) in
+                    self?.collectionView.reloadData()
+                }
+                .catch { (error) in
+                    print("Error adding family member: \(error)")
+                }
+                .finally {
+                    progressView.dismiss(animated: true, completion: nil)
+                }
+            }
         }
     }
 }

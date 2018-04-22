@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Gender
 struct KairosGender: Codable {
     let femaleConfidence: Double
-    let makeConfidence: Double
+    let maleConfidence: Double
     let type: String
 }
 

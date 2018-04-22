@@ -13,13 +13,13 @@
         <!--My Family-->
         <scene sceneID="NYh-My-KtP">
             <objects>
-                <viewController id="nUS-cL-XaE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyFamilyViewController" id="nUS-cL-XaE" customClass="MyFamilyViewController" customModule="Levels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Knt-HF-Nxq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="My_Family_White_Bottom" translatesAutoresizingMaskIntoConstraints="NO" id="QYG-HQ-52z">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yLv-qS-1tD">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
@@ -86,22 +86,33 @@
                         </subviews>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.45882352941176469" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="QYG-HQ-52z" firstAttribute="trailing" secondItem="fMs-xk-xZO" secondAttribute="trailing" id="0rW-B1-h5C"/>
+                            <constraint firstItem="QYG-HQ-52z" firstAttribute="top" secondItem="Knt-HF-Nxq" secondAttribute="top" constant="28" id="0b6-eB-Oyl"/>
                             <constraint firstItem="yLv-qS-1tD" firstAttribute="bottom" secondItem="fMs-xk-xZO" secondAttribute="bottom" id="8qj-Uu-FcV"/>
+                            <constraint firstItem="QYG-HQ-52z" firstAttribute="leading" secondItem="fMs-xk-xZO" secondAttribute="leading" id="LMu-yO-uzy"/>
                             <constraint firstItem="yLv-qS-1tD" firstAttribute="top" secondItem="fMs-xk-xZO" secondAttribute="top" constant="56" id="Sno-O2-R3v"/>
-                            <constraint firstItem="QYG-HQ-52z" firstAttribute="top" secondItem="Knt-HF-Nxq" secondAttribute="top" id="V6s-Wd-GJK"/>
                             <constraint firstItem="yLv-qS-1tD" firstAttribute="trailing" secondItem="fMs-xk-xZO" secondAttribute="trailing" id="aZe-Rv-HbP"/>
-                            <constraint firstItem="QYG-HQ-52z" firstAttribute="bottom" secondItem="fMs-xk-xZO" secondAttribute="bottom" id="i95-Wr-LA1"/>
+                            <constraint firstItem="QYG-HQ-52z" firstAttribute="bottom" secondItem="fMs-xk-xZO" secondAttribute="bottom" id="kEP-aC-nFp"/>
                             <constraint firstItem="yLv-qS-1tD" firstAttribute="leading" secondItem="fMs-xk-xZO" secondAttribute="leading" id="mEN-Xe-xNE"/>
-                            <constraint firstItem="QYG-HQ-52z" firstAttribute="leading" secondItem="fMs-xk-xZO" secondAttribute="leading" id="mL7-Xs-LPW"/>
+                            <constraint firstItem="QYG-HQ-52z" firstAttribute="trailing" secondItem="fMs-xk-xZO" secondAttribute="trailing" id="su2-ZD-w1w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fMs-xk-xZO"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Family" id="MR8-Jk-JFB">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="6jq-jw-Ltp">
+                            <connections>
+                                <action selector="dismiss" destination="nUS-cL-XaE" id="hzR-bn-4um"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qcn-VG-Irk">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addFamilyMemberTappedWithSender:" destination="nUS-cL-XaE" id="BuZ-gk-xZn"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="yLv-qS-1tD" id="8uI-X5-nbP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIq-tZ-h8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,7 +121,6 @@
         <!--Navigation Controller-->
         <scene sceneID="CAF-Wj-7Or">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gmY-xb-P7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HI0-er-0wG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OWf-Iv-1kb">
@@ -127,6 +137,7 @@
                         <segue destination="nUS-cL-XaE" kind="relationship" relationship="rootViewController" id="gRJ-IR-mqO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmY-xb-P7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1016.8" y="353.9730134932534"/>
         </scene>

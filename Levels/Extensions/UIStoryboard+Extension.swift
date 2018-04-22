@@ -27,6 +27,18 @@ extension UIStoryboard {
     static func loadShareImageViewController() -> ShareImageViewController {
         return loadControllerFrom(.shareImage, type: ShareImageViewController.self)
     }
+    
+    static func loadIntialMyFamilyViewController() -> UINavigationController {
+        let storyboard = UIStoryboard(name: Storyboard.myFamily.rawValue, bundle: nil)
+        guard let controller = storyboard.instantiateInitialViewController() as? UINavigationController else {
+            fatalError("UINavigationController does not exist in MyFamily.storyboard!")
+        }
+        return controller
+    }
+    
+    static func loadProgressViewController() -> ProgressViewController {
+        return loadControllerFrom(.progress, type: ProgressViewController.self)
+    }
 }
 
 
@@ -75,4 +87,6 @@ fileprivate extension UIStoryboard {
 fileprivate enum Storyboard: String {
     case main = "Main"
     case shareImage = "ShareImage"
+    case myFamily = "MyFamily"
+    case progress = "Progress"
 }
