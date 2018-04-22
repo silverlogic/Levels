@@ -85,6 +85,11 @@ final class Kairos {
     
     static func recognizePerson(with url: String) -> Promise<Bool> {
         return Promise { seal in
+//            guard let imageData = UIImageJPEGRepresentation(image, 0.7) else {
+//                seal.reject(KairosError.badImage)
+//                return
+//            }
+//            let baseString = imageData.base64EncodedString(options: .lineLength64Characters)
             let endpoint = Endpoints.recognize.endpoint()
             let parameters: [String: Any] = [
                 "image": url,

@@ -39,6 +39,18 @@ extension UIStoryboard {
     static func loadProgressViewController() -> ProgressViewController {
         return loadControllerFrom(.progress, type: ProgressViewController.self)
     }
+
+    static func loadShelterViewController() -> ShelterViewController {
+        return loadControllerFrom(.shelter, type: ShelterViewController.self)
+    }
+
+    static func loadARFloodViewController() -> ARFloodViewController {
+        return loadControllerFrom(.main, type: ARFloodViewController.self)
+    }
+
+    static func loadShelterResultViewController() -> ShelterResultsViewController {
+        return loadControllerFrom(.shelter, type: ShelterResultsViewController.self)
+    }
 }
 
 
@@ -89,4 +101,5 @@ fileprivate enum Storyboard: String {
     case shareImage = "ShareImage"
     case myFamily = "MyFamily"
     case progress = "Progress"
+    case shelter = "Shelter"
 }
