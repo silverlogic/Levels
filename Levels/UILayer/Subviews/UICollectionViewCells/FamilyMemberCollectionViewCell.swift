@@ -34,7 +34,8 @@ extension FamilyMemberCollectionViewCell {
             questionMarkImageView.isHidden = false
         }
         guard let demoImage = image else { return }
-        questionMarkImageView.image = demoImage
+        familyMemberImageView.image = demoImage
+        familyMemberImageView.alpha = 0.5
     }
 }
 

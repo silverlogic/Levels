@@ -53,10 +53,10 @@ final class Cloudinary {
                 .setWidth(400).setHeight(600).setCrop(.fit).chain()
                 .setOverlay("assets:AppIcon").setGravity("south").setX(5).setY(5).setWidth(75).setOpacity(60).chain()
                 .setOverlay("assets:blue").setGravity("north_west").setFlags("relative").setWidth(1.0).setHeight(0.12).setOpacity(85).chain()
-                .setOverlay("assets:Sandbag").setGravity("north_east").setX(5).setY(5).setWidth(75).setOpacity(85).chain()
-                .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(30).setText(text: String(sandbagInfo.total))).setGravity("north_east").setX(18).setY(30).setColor("black").chain()
+                .setOverlay("assets:Sandbag").setGravity("north_east").setX(5).setY(8).setWidth(60).setOpacity(85).chain()
+                .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(26).setText(text: String(sandbagInfo.total))).setGravity("north_east").setX(18).setY(30).setColor("black").chain()
 
-                .setOverlay("assets:Entrance_Ways_Arrow").setGravity("north_west").setX(5).setY(10).setOpacity(85).chain()
+                .setOverlay("assets:Entrance_Ways").setGravity("north_west").setX(5).setY(10).setOpacity(85).chain()
                     .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(15).setText(text: String(sandbagInfo.doors))).setGravity("north_west").setX(8).setY(13).setColor("white").chain()
                     .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(15).setText(text: String(sandbagInfo.slidingDoors))).setGravity("north_west").setX(63).setY(13).setColor("white").chain()
                     .setOverlayWithLayer(CLDTextLayer().setFontFamily(fontFamily: "Arial").setFontSize(15).setText(text: String(sandbagInfo.garageDoors))).setGravity("north_west").setX(115).setY(13).setColor("white").chain()

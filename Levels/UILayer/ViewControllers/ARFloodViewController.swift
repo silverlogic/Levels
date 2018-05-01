@@ -147,7 +147,7 @@ private extension ARFloodViewController {
     func setupScene() {
         surgeLevelSlider.thumbImage = UIImage(named: "icon-slider-inactive")
         sceneView.delegate = self
-        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+        //self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         self.sceneView.autoenablesDefaultLighting = true
     }
     
@@ -155,7 +155,7 @@ private extension ARFloodViewController {
         sceneView.session = ARSession()
         let configuration = ARWorldTrackingConfiguration()
         configuration.worldAlignment = .gravityAndHeading
-        configuration.planeDetection = [.horizontal, .vertical]
+        configuration.planeDetection = [.horizontal]
         arSession.run(configuration)
     }
 }
