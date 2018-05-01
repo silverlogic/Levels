@@ -13,4 +13,5 @@ extension UIStoryboardSegue {
     // MARK: - Segue Identifiers
     static let goToSandbagCalculator = "goToSandbagCalculator"
     static let goToShareImage = "goToShareImage"
+    static let goToShelterResults = "goToShelterResults"
 }
